@@ -36,7 +36,7 @@ async function completarLimites(page: Page, respuestas: string[]) {
 const correctas = trio.map((e) => e.respuesta);
 
 const PAGO =
-  "El reto es gratis. El acompañamiento es de pago: te paso precios y horarios por WhatsApp.";
+  "Practica con estos retos que son gratis, el acompañamiento ya es de pago.";
 
 async function revisarCierre(page: Page, textos: string[], boton: string) {
   for (const texto of textos) {

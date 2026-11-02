@@ -84,8 +84,8 @@ export default function Resultado({ tema, aciertos, alOtroTema }: Props) {
         {cierre.boton}
       </a>
       <p class="discreto">
-        El reto es gratis. El acompañamiento es de pago: te paso precios y
-        horarios por WhatsApp.
+        Practica con estos retos que son gratis, el acompañamiento ya es de
+        pago.
       </p>
       <button type="button" class="enlace-pequeno" onClick={alOtroTema}>
         Hacer otro tema
