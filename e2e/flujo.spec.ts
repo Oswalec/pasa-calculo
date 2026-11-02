@@ -98,6 +98,6 @@ test("un tema terminado reabre Resultado con el enlace exacto", async ({
   await page.getByRole("button", { name: "Límites" }).click();
   await expect(page.getByRole("heading", { name: "3 de 3" })).toBeVisible();
   await expect(
-    page.getByRole("link", { name: "Quiero que me acompañes" }),
+    page.getByRole("link", { name: "Quiero llegar listo al examen" }),
   ).toHaveAttribute("href", "https://wa.link/de928w");
 });

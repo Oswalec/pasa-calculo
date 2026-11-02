@@ -35,32 +35,91 @@ async function completarLimites(page: Page, respuestas: string[]) {
 
 const correctas = trio.map((e) => e.respuesta);
 
-test("tres aciertos muestran el mejor nivel y el enlace", async ({ page }) => {
-  await completarLimites(page, correctas);
-  await expect(page.getByRole("heading", { name: "3 de 3" })).toBeVisible();
-  await expect(page.getByText("¡Excelente!")).toBeVisible();
-  await expect(
-    page.getByText(
-      "Te acompañaré hasta que logres pasar el cálculo que necesites",
-    ),
-  ).toBeVisible();
-  const enlace = page.getByRole("link", { name: "Quiero que me acompañes" });
+const PAGO =
+  "El reto es gratis. El acompañamiento es de pago: te paso precios y horarios por WhatsApp.";
+
+async function revisarCierre(page: Page, textos: string[], boton: string) {
+  for (const texto of textos) {
+    await expect(page.getByText(texto)).toBeVisible();
+  }
+  await expect(page.getByText(PAGO)).toBeVisible();
+  const enlace = page.getByRole("link", { name: boton });
   await expect(enlace).toHaveAttribute("href", "https://wa.link/de928w");
   await expect(enlace).toHaveAttribute("target", "_blank");
   await expect(enlace).toHaveAttribute("rel", /noopener/);
+}
+
+test("tres aciertos venden el nivel de examen", async ({ page }) => {
+  await completarLimites(page, correctas);
+  await expect(page.getByRole("heading", { name: "3 de 3" })).toBeVisible();
+  await revisarCierre(
+    page,
+    [
+      "¡Excelente! Ya tienes la base",
+      "Estos ejercicios son los fáciles.",
+      "En mi acompañamiento avanzas al nivel de examen",
+    ],
+    "Quiero llegar listo al examen",
+  );
   await expect(page.getByText(/Nuevo reto en \d\d:\d\d:\d\d/)).toBeVisible();
 });
 
-test("dos aciertos animan a seguir", async ({ page }) => {
+test("dos aciertos venden corregir el error", async ({ page }) => {
   await completarLimites(page, [correctas[0], correctas[1], FALSA] as string[]);
   await expect(page.getByRole("heading", { name: "2 de 3" })).toBeVisible();
-  await expect(page.getByText("Vas bien, te falta poco")).toBeVisible();
+  await revisarCierre(
+    page,
+    [
+      "Estuviste cerca, y ahí está el riesgo",
+      "Un 2 de 3 te hace sentir listo",
+      "En mi acompañamiento encontramos qué te hace fallar",
+    ],
+    "Quiero corregirlo antes del examen",
+  );
 });
 
-test("cero aciertos sugieren reforzar", async ({ page }) => {
+test("un acierto reconoce lo logrado y ofrece el acompañamiento", async ({
+  page,
+}) => {
+  await completarLimites(page, [correctas[0], FALSA, FALSA] as string[]);
+  await expect(page.getByRole("heading", { name: "1 de 3" })).toBeVisible();
+  await revisarCierre(
+    page,
+    [
+      "Ya tienes una parte",
+      "Ese acierto te muestra que sí puedes.",
+      "te guío paso a paso hasta que logres pasar",
+    ],
+    "Quiero el acompañamiento",
+  );
+});
+
+test("cero aciertos reflexionan primero y ofrecen el acompañamiento", async ({
+  page,
+}) => {
   await completarLimites(page, [FALSA, FALSA, FALSA]);
   await expect(page.getByRole("heading", { name: "0 de 3" })).toBeVisible();
-  await expect(page.getByText("Aquí te conviene reforzar")).toBeVisible();
+  await revisarCierre(
+    page,
+    [
+      "Hoy no salió, y está bien que lo sepas ahora",
+      "Esto no significa que no puedas con Cálculo.",
+      "te guío paso a paso hasta que logres pasar",
+    ],
+    "Quiero el acompañamiento",
+  );
+});
+
+test("Hacer otro tema vuelve a Inicio y conserva lo hecho", async ({
+  page,
+}) => {
+  await completarLimites(page, [FALSA, FALSA, FALSA]);
+  await page.getByRole("button", { name: "Hacer otro tema" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Reto de hoy: 3 ejercicios" }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Límites" }).click();
+  await expect(page.getByRole("heading", { name: "0 de 3" })).toBeVisible();
 });
 
 test("un tema terminado vuelve directo a Resultado tras recargar", async ({
