@@ -7,7 +7,6 @@ type Tecla =
       latex?: string;
       insert?: string;
       class?: string;
-      width?: 0.5 | 1 | 1.5 | 2 | 5;
     };
 
 const DIGITOS_1: Tecla[] = ["7", "8", "9", "+", "-"];
@@ -32,9 +31,9 @@ const SEN = { label: "sen", insert: "\\operatorname{sen}" };
 const ARCSEN = {
   label: "arcsen",
   insert: "\\operatorname{arcsen}",
-  class: "small",
+  class: "small w15",
 };
-const ARCTAN = { label: "arctan", insert: "\\arctan", class: "small" };
+const ARCTAN = { label: "arctan", insert: "\\arctan", class: "small w15" };
 const funcion = (nombre: string) => ({
   label: nombre,
   insert: `\\${nombre}`,
