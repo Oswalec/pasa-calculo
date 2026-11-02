@@ -1,0 +1,12 @@
+[
+  {
+    "id": "lim-01",
+    "tema": "limites",
+    "n": 1,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\sin x}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Límite fundamental.",
+    "chequeo": { "clase": "limite", "f": "\\frac{\\sin x}{x}", "punto": "0" }
+  }
+]

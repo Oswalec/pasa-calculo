@@ -1,0 +1,702 @@
+[
+  {
+    "id": "lim-01",
+    "tema": "limites",
+    "n": 1,
+    "enunciado": "Calcula $\\lim_{x\\to 2}\\left(3x^2-x+1\\right)$.",
+    "tipo": "expresion",
+    "respuesta": "11",
+    "solucion": "Sustitución directa: $3(2)^2-2+1=12-2+1$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "3x^2-x+1",
+      "punto": "2"
+    }
+  },
+  {
+    "id": "lim-02",
+    "tema": "limites",
+    "n": 2,
+    "enunciado": "Calcula $\\lim_{x\\to -1}\\left(x^3+2x^2-4\\right)$.",
+    "tipo": "expresion",
+    "respuesta": "-3",
+    "solucion": "Sustitución directa: $(-1)^3+2(-1)^2-4=-1+2-4$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "x^3+2x^2-4",
+      "punto": "-1"
+    }
+  },
+  {
+    "id": "lim-03",
+    "tema": "limites",
+    "n": 3,
+    "enunciado": "Calcula $\\lim_{x\\to 3}\\left(2x^2+5x-1\\right)$.",
+    "tipo": "expresion",
+    "respuesta": "32",
+    "solucion": "Sustitución directa: $2(3)^2+5(3)-1=18+15-1$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "2x^2+5x-1",
+      "punto": "3"
+    }
+  },
+  {
+    "id": "lim-04",
+    "tema": "limites",
+    "n": 4,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\left(4x^3-7x+6\\right)$.",
+    "tipo": "expresion",
+    "respuesta": "6",
+    "solucion": "Sustitución directa: $0-0+6$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "4x^3-7x+6",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-05",
+    "tema": "limites",
+    "n": 5,
+    "enunciado": "Calcula $\\lim_{x\\to -2}\\left(x^2-3x+2\\right)$.",
+    "tipo": "expresion",
+    "respuesta": "12",
+    "solucion": "Sustitución directa: $4+6+2$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "x^2-3x+2",
+      "punto": "-2"
+    }
+  },
+  {
+    "id": "lim-06",
+    "tema": "limites",
+    "n": 6,
+    "enunciado": "Calcula $\\lim_{x\\to 1}\\left(x^4+2x^2+3\\right)$.",
+    "tipo": "expresion",
+    "respuesta": "6",
+    "solucion": "Sustitución directa: $1+2+3$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "x^4+2x^2+3",
+      "punto": "1"
+    }
+  },
+  {
+    "id": "lim-07",
+    "tema": "limites",
+    "n": 7,
+    "enunciado": "Calcula $\\lim_{x\\to 2}\\frac{x^2+3x}{x+1}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{10}{3}",
+    "solucion": "Sustitución directa: $\\frac{4+6}{3}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2+3x}{x+1}",
+      "punto": "2"
+    }
+  },
+  {
+    "id": "lim-08",
+    "tema": "limites",
+    "n": 8,
+    "enunciado": "Calcula $\\lim_{x\\to -1}\\frac{2x^2+1}{x-3}$.",
+    "tipo": "expresion",
+    "respuesta": "-\\frac{3}{4}",
+    "solucion": "Sustitución directa: $\\frac{3}{-4}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{2x^2+1}{x-3}",
+      "punto": "-1"
+    }
+  },
+  {
+    "id": "lim-09",
+    "tema": "limites",
+    "n": 9,
+    "enunciado": "Calcula $\\lim_{x\\to 4}\\sqrt{x+5}$.",
+    "tipo": "expresion",
+    "respuesta": "3",
+    "solucion": "La raíz es continua: $\\sqrt{4+5}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\sqrt{x+5}",
+      "punto": "4"
+    }
+  },
+  {
+    "id": "lim-10",
+    "tema": "limites",
+    "n": 10,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\operatorname{sen} x}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Límite trigonométrico fundamental.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sin x}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-11",
+    "tema": "limites",
+    "n": 11,
+    "enunciado": "Calcula $\\lim_{x\\to 3}\\frac{x^2-9}{x-3}$.",
+    "tipo": "expresion",
+    "respuesta": "6",
+    "solucion": "Factoriza: $\\frac{(x-3)(x+3)}{x-3}$. Para $x\\neq 3$ queda $x+3$; evalúa.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-9}{x-3}",
+      "punto": "3"
+    }
+  },
+  {
+    "id": "lim-12",
+    "tema": "limites",
+    "n": 12,
+    "enunciado": "Calcula $\\lim_{x\\to -2}\\frac{x^2+5x+6}{x+2}$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Factoriza: $\\frac{(x+2)(x+3)}{x+2}$. Queda $x+3$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2+5x+6}{x+2}",
+      "punto": "-2"
+    }
+  },
+  {
+    "id": "lim-13",
+    "tema": "limites",
+    "n": 13,
+    "enunciado": "Calcula $\\lim_{x\\to 1}\\frac{x^2-1}{x-1}$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Factoriza: $\\frac{(x-1)(x+1)}{x-1}$. Queda $x+1$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-1}{x-1}",
+      "punto": "1"
+    }
+  },
+  {
+    "id": "lim-14",
+    "tema": "limites",
+    "n": 14,
+    "enunciado": "Calcula $\\lim_{x\\to 4}\\frac{x^2-16}{x-4}$.",
+    "tipo": "expresion",
+    "respuesta": "8",
+    "solucion": "Factoriza: $\\frac{(x-4)(x+4)}{x-4}$. Queda $x+4$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-16}{x-4}",
+      "punto": "4"
+    }
+  },
+  {
+    "id": "lim-15",
+    "tema": "limites",
+    "n": 15,
+    "enunciado": "Calcula $\\lim_{x\\to 2}\\frac{x^2-5x+6}{x-2}$.",
+    "tipo": "expresion",
+    "respuesta": "-1",
+    "solucion": "Factoriza: $\\frac{(x-2)(x-3)}{x-2}$. Queda $x-3$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-5x+6}{x-2}",
+      "punto": "2"
+    }
+  },
+  {
+    "id": "lim-16",
+    "tema": "limites",
+    "n": 16,
+    "enunciado": "Calcula $\\lim_{x\\to -3}\\frac{x^2+6x+9}{x+3}$.",
+    "tipo": "expresion",
+    "respuesta": "0",
+    "solucion": "Factoriza: $\\frac{(x+3)^2}{x+3}$. Queda $x+3$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2+6x+9}{x+3}",
+      "punto": "-3"
+    }
+  },
+  {
+    "id": "lim-17",
+    "tema": "limites",
+    "n": 17,
+    "enunciado": "Calcula $\\lim_{x\\to 5}\\frac{x^2-25}{x-5}$.",
+    "tipo": "expresion",
+    "respuesta": "10",
+    "solucion": "Factoriza: $\\frac{(x-5)(x+5)}{x-5}$. Queda $x+5$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-25}{x-5}",
+      "punto": "5"
+    }
+  },
+  {
+    "id": "lim-18",
+    "tema": "limites",
+    "n": 18,
+    "enunciado": "Calcula $\\lim_{x\\to 1}\\frac{x^3-1}{x-1}$.",
+    "tipo": "expresion",
+    "respuesta": "3",
+    "solucion": "Diferencia de cubos: $(x-1)(x^2+x+1)$. Evalúa $1+1+1$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^3-1}{x-1}",
+      "punto": "1"
+    }
+  },
+  {
+    "id": "lim-19",
+    "tema": "limites",
+    "n": 19,
+    "enunciado": "Calcula $\\lim_{x\\to 2}\\frac{x^3-8}{x-2}$.",
+    "tipo": "expresion",
+    "respuesta": "12",
+    "solucion": "Diferencia de cubos: $(x-2)(x^2+2x+4)$. Evalúa $4+4+4$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^3-8}{x-2}",
+      "punto": "2"
+    }
+  },
+  {
+    "id": "lim-20",
+    "tema": "limites",
+    "n": 20,
+    "enunciado": "Calcula $\\lim_{x\\to -1}\\frac{x^3+1}{x+1}$.",
+    "tipo": "expresion",
+    "respuesta": "3",
+    "solucion": "Suma de cubos: $(x+1)(x^2-x+1)$. Evalúa $1+1+1$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^3+1}{x+1}",
+      "punto": "-1"
+    }
+  },
+  {
+    "id": "lim-21",
+    "tema": "limites",
+    "n": 21,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\sqrt{x+9}-3}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{6}",
+    "solucion": "Racionaliza: multiplica por $\\sqrt{x+9}+3$. Queda $\\frac{1}{\\sqrt{x+9}+3}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sqrt{x+9}-3}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-22",
+    "tema": "limites",
+    "n": 22,
+    "enunciado": "Calcula $\\lim_{x\\to 5}\\frac{\\sqrt{x+4}-3}{x-5}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{6}",
+    "solucion": "Racionaliza: $\\frac{x+4-9}{(x-5)(\\sqrt{x+4}+3)}$. Cancela $x-5$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sqrt{x+4}-3}{x-5}",
+      "punto": "5"
+    }
+  },
+  {
+    "id": "lim-23",
+    "tema": "limites",
+    "n": 23,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\sqrt{1+2x}-1}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Racionaliza: $\\frac{2}{\\sqrt{1+2x}+1}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sqrt{1+2x}-1}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-24",
+    "tema": "limites",
+    "n": 24,
+    "enunciado": "Calcula $\\lim_{x\\to 3}\\frac{\\sqrt{x+6}-3}{x-3}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{6}",
+    "solucion": "Racionaliza: $\\frac{x-3}{(x-3)(\\sqrt{x+6}+3)}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sqrt{x+6}-3}{x-3}",
+      "punto": "3"
+    }
+  },
+  {
+    "id": "lim-25",
+    "tema": "limites",
+    "n": 25,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\sqrt{4+x}-2}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{4}",
+    "solucion": "Racionaliza: $\\frac{1}{\\sqrt{4+x}+2}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sqrt{4+x}-2}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-26",
+    "tema": "limites",
+    "n": 26,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{2}",
+    "solucion": "Límite trigonométrico fundamental.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{1-\\cos x}{x^2}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-27",
+    "tema": "limites",
+    "n": 27,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\operatorname{sen} 5x}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "5",
+    "solucion": "Escribe $5\\cdot\\frac{\\operatorname{sen} 5x}{5x}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sin 5x}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-28",
+    "tema": "limites",
+    "n": 28,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\tan 3x}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "3",
+    "solucion": "Escribe $3\\cdot\\frac{\\tan 3x}{3x}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\tan 3x}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-29",
+    "tema": "limites",
+    "n": 29,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\operatorname{sen} 2x}{\\operatorname{sen} 7x}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{2}{7}",
+    "solucion": "Reescribe como $\\frac{2}{7}\\cdot\\frac{\\operatorname{sen} 2x}{2x}\\cdot\\frac{7x}{\\operatorname{sen} 7x}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sin 2x}{\\sin 7x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-30",
+    "tema": "limites",
+    "n": 30,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{1-\\cos 4x}{x^2}$.",
+    "tipo": "expresion",
+    "respuesta": "8",
+    "solucion": "Reescribe $\\frac{1-\\cos 4x}{x^2}=16\\cdot\\frac{1-\\cos 4x}{(4x)^2}$ y usa $\\lim_{u\\to 0}\\frac{1-\\cos u}{u^2}=\\frac{1}{2}$ con $u=4x$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{1-\\cos 4x}{x^2}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-31",
+    "tema": "limites",
+    "n": 31,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{3x^2+2x-1}{x^2-4}$.",
+    "tipo": "expresion",
+    "respuesta": "3",
+    "solucion": "Divide entre $x^2$; dominan los coeficientes principales.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{3x^2+2x-1}{x^2-4}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-32",
+    "tema": "limites",
+    "n": 32,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{5x^3-x}{2x^3+7}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{5}{2}",
+    "solucion": "Mismo grado: cociente de coeficientes principales.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{5x^3-x}{2x^3+7}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-33",
+    "tema": "limites",
+    "n": 33,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{2x+1}{x^2+3}$.",
+    "tipo": "expresion",
+    "respuesta": "0",
+    "solucion": "El denominador crece más rápido que el numerador.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{2x+1}{x^2+3}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-34",
+    "tema": "limites",
+    "n": 34,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{4x^2-1}{x^3+2}$.",
+    "tipo": "expresion",
+    "respuesta": "0",
+    "solucion": "Grado del denominador mayor: el cociente tiende a cero.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{4x^2-1}{x^3+2}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-35",
+    "tema": "limites",
+    "n": 35,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{7x^3+2}{x^2-1}$.",
+    "tipo": "expresion",
+    "respuesta": "\\infty",
+    "solucion": "El grado del numerador es mayor; el término dominante es $7x$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{7x^3+2}{x^2-1}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-36",
+    "tema": "limites",
+    "n": 36,
+    "enunciado": "Calcula $\\lim_{x\\to -\\infty}\\frac{7x^3+2}{x^2-1}$.",
+    "tipo": "expresion",
+    "respuesta": "-\\infty",
+    "solucion": "El término dominante es $7x$; cuando $x\\to-\\infty$, $7x\\to-\\infty$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{7x^3+2}{x^2-1}",
+      "punto": "-\\infty"
+    }
+  },
+  {
+    "id": "lim-37",
+    "tema": "limites",
+    "n": 37,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{\\sqrt{x^2+4x}}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Para $x$ positivo: $\\frac{\\sqrt{x^2(1+4/x)}}{x}=\\sqrt{1+\\frac{4}{x}}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sqrt{x^2+4x}}{x}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-38",
+    "tema": "limites",
+    "n": 38,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{2x^2+3}{x^2-5x}$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Divide entre $x^2$: $\\frac{2+3/x^2}{1-5/x}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{2x^2+3}{x^2-5x}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-39",
+    "tema": "limites",
+    "n": 39,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{x^2-3x}{4x^2+1}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{4}",
+    "solucion": "Mismo grado: cociente $\\frac{1}{4}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-3x}{4x^2+1}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-40",
+    "tema": "limites",
+    "n": 40,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{6x^4+x}{3x^4-2}$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Mismo grado: cociente $\\frac{6}{3}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{6x^4+x}{3x^4-2}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-41",
+    "tema": "limites",
+    "n": 41,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{e^x-1}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Límite fundamental de la exponencial.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{e^x-1}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-42",
+    "tema": "limites",
+    "n": 42,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\ln(1+x)}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Límite fundamental del logaritmo natural.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\ln(1+x)}{x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-43",
+    "tema": "limites",
+    "n": 43,
+    "enunciado": "Calcula $\\lim_{x\\to 2}\\frac{x^2-4}{x^2-3x+2}$.",
+    "tipo": "expresion",
+    "respuesta": "4",
+    "solucion": "Factoriza: $\\frac{(x-2)(x+2)}{(x-1)(x-2)}$. Queda $\\frac{x+2}{x-1}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-4}{x^2-3x+2}",
+      "punto": "2"
+    }
+  },
+  {
+    "id": "lim-44",
+    "tema": "limites",
+    "n": 44,
+    "enunciado": "Calcula $\\lim_{x\\to 1}\\frac{x^2-3x+2}{x-1}$.",
+    "tipo": "expresion",
+    "respuesta": "-1",
+    "solucion": "Factoriza: $\\frac{(x-1)(x-2)}{x-1}$. Queda $x-2$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-3x+2}{x-1}",
+      "punto": "1"
+    }
+  },
+  {
+    "id": "lim-45",
+    "tema": "limites",
+    "n": 45,
+    "enunciado": "Calcula $\\lim_{x\\to -2}\\frac{x^2-4}{x^2+3x+2}$.",
+    "tipo": "expresion",
+    "respuesta": "4",
+    "solucion": "Factoriza: $\\frac{(x-2)(x+2)}{(x+1)(x+2)}$. Queda $\\frac{x-2}{x+1}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{x^2-4}{x^2+3x+2}",
+      "punto": "-2"
+    }
+  },
+  {
+    "id": "lim-46",
+    "tema": "limites",
+    "n": 46,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\operatorname{sen} 4x}{\\operatorname{sen} 2x}$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Reescribe usando los límites fundamentales: $\\frac{4}{2}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sin 4x}{\\sin 2x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-47",
+    "tema": "limites",
+    "n": 47,
+    "enunciado": "Calcula $\\lim_{x\\to 0}\\frac{\\tan 2x}{\\operatorname{sen} 5x}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{2}{5}",
+    "solucion": "Reescribe como $\\frac{\\tan 2x}{2x}\\cdot\\frac{5x}{\\operatorname{sen} 5x}\\cdot\\frac{2}{5}$ y usa los límites fundamentales.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\tan 2x}{\\sin 5x}",
+      "punto": "0"
+    }
+  },
+  {
+    "id": "lim-48",
+    "tema": "limites",
+    "n": 48,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{\\sqrt{9x^2+x}}{x}$.",
+    "tipo": "expresion",
+    "respuesta": "3",
+    "solucion": "Para $x$ positivo: $\\sqrt{9+\\frac{1}{x}}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{\\sqrt{9x^2+x}}{x}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-49",
+    "tema": "limites",
+    "n": 49,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{3x^2-x+1}{6x^2+4}$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{2}",
+    "solucion": "Mismo grado; cociente de coeficientes principales.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{3x^2-x+1}{6x^2+4}",
+      "punto": "\\infty"
+    }
+  },
+  {
+    "id": "lim-50",
+    "tema": "limites",
+    "n": 50,
+    "enunciado": "Calcula $\\lim_{x\\to \\infty}\\frac{8x^3-2x}{4x^3+5}$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Los polinomios tienen el mismo grado; se dividen los coeficientes principales: $\\frac{8}{4}$.",
+    "chequeo": {
+      "clase": "limite",
+      "f": "\\frac{8x^3-2x}{4x^3+5}",
+      "punto": "\\infty"
+    }
+  }
+]
