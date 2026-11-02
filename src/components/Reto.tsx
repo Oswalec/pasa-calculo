@@ -3,10 +3,12 @@ import type { Ejercicio as Item, Tema } from "../data/tipos.ts";
 import { cargarBanco } from "../lib/banco.ts";
 import type { Veredicto } from "../lib/corrector.ts";
 import { fechaLima } from "../lib/fechas.ts";
+import { guardarResultado, resultadoDe } from "../lib/progreso.ts";
 import { retoDeHoy } from "../lib/retos.ts";
 import Ejercicio from "./Ejercicio.tsx";
 import Inicio from "./Inicio.tsx";
 import Respuesta from "./Respuesta.tsx";
+import Resultado from "./Resultado.tsx";
 
 type Pantalla = "inicio" | "ejercicio" | "respuesta" | "resultado";
 
@@ -19,9 +21,16 @@ export default function Reto() {
   const [veredicto, setVeredicto] = useState<Veredicto | null>(null);
 
   async function elegirTema(elegido: Tema) {
-    const banco = await cargarBanco(elegido);
+    const hoy = fechaLima();
     setTema(elegido);
-    setTrio(retoDeHoy(banco, fechaLima()));
+    const hecho = resultadoDe(elegido, hoy);
+    if (hecho !== null) {
+      setAciertos(hecho);
+      setPantalla("resultado");
+      return;
+    }
+    const banco = await cargarBanco(elegido);
+    setTrio(retoDeHoy(banco, hoy));
     setIndice(0);
     setAciertos(0);
     setPantalla("ejercicio");
@@ -35,6 +44,7 @@ export default function Reto() {
 
   function alSeguir() {
     if (indice === 2) {
+      guardarResultado(tema, fechaLima(), aciertos);
       setPantalla("resultado");
       return;
     }
@@ -42,8 +52,9 @@ export default function Reto() {
     setPantalla("ejercicio");
   }
 
-  if (pantalla === "inicio" || !trio) return <Inicio alElegir={elegirTema} />;
-  if (pantalla === "resultado") return <h1>{aciertos} de 3</h1>;
+  if (pantalla === "inicio") return <Inicio alElegir={elegirTema} />;
+  if (pantalla === "resultado") return <Resultado aciertos={aciertos} />;
+  if (!trio) return null;
   const ejercicio = trio[indice] as Item;
   if (pantalla === "respuesta" && veredicto) {
     return (
