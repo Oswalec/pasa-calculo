@@ -266,7 +266,7 @@
       "src/pages/index.astro",
       "e2e/inicio.spec.ts"
     ],
-    "status": "pending"
+    "status": "done"
   },
   {
     "id": "E4-T2",

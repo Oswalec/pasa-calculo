@@ -1,10 +1,12 @@
 ---
 import Base from "../layouts/Base.astro";
+import Reto from "../components/Reto.tsx";
 ---
 
 <Base>
   <p class="marca">Pasa Cálculo</p>
   <main id="principal">
+    <Reto client:only="preact" />
     <noscript>Activa JavaScript para hacer el reto de hoy.</noscript>
   </main>
 </Base>
