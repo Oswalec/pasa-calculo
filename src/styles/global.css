@@ -60,6 +60,11 @@ h1 {
   color: var(--negro);
 }
 
+.boton[aria-pressed="true"] {
+  border-color: var(--durazno);
+  color: var(--durazno);
+}
+
 .boton:disabled {
   opacity: 0.5;
   cursor: not-allowed;
