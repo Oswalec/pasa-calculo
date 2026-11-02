@@ -1,0 +1,513 @@
+[
+  {
+    "id": "con-01",
+    "tema": "continuidad",
+    "n": 1,
+    "enunciado": "Sea $f(x)=x^2-3x+1$. ¿Cómo es $f$ en $x=2$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Es un polinomio, continuo en todo $\\mathbb{R}$. $f(2)=4-6+1=-1$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-02",
+    "tema": "continuidad",
+    "n": 2,
+    "enunciado": "Sea $f(x)=3x+5$. ¿Cómo es $f$ en $x=-1$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Es lineal, por tanto continua. $f(-1)=-3+5=2$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-03",
+    "tema": "continuidad",
+    "n": 3,
+    "enunciado": "Sea $f(x)=\\frac{x^2-1}{x-1}$. ¿Cómo es $f$ en $x=1$?",
+    "tipo": "opcion",
+    "respuesta": "removible",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El denominador se anula. Aunque se simplifica a $x+1$ para $x\\ne 1$, $f(1)$ no está definida.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-04",
+    "tema": "continuidad",
+    "n": 4,
+    "enunciado": "Sea $f(x)=\\frac{x^2-4}{x-2}$. ¿Cómo es $f$ en $x=2$?",
+    "tipo": "opcion",
+    "respuesta": "removible",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Para $x\\ne 2$, $f(x)=x+2$. El límite es $4$, pero $f(2)$ no existe.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-05",
+    "tema": "continuidad",
+    "n": 5,
+    "enunciado": "Sea $f(x)=\\frac{1}{x-3}$. ¿Cómo es $f$ en $x=3$?",
+    "tipo": "opcion",
+    "respuesta": "infinita",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El denominador es cero y el valor crece hasta el infinito cerca de $3$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-07",
+    "tema": "continuidad",
+    "n": 7,
+    "enunciado": "Sea $f(x)=|x|$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El límite por izquierda y derecha vale $0$; coincide con $f(0)=0$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-08",
+    "tema": "continuidad",
+    "n": 8,
+    "enunciado": "Sea $f(x)=\\lfloor x\\rfloor$. ¿Cómo es $f$ en $x=2$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Por la izquierda se aproxima a $1$ y por la derecha vale $2$; los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-09",
+    "tema": "continuidad",
+    "n": 9,
+    "enunciado": "Sea $f(x)=\\operatorname{sen} x$. ¿Cómo es $f$ en $x=\\pi$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El seno es continuo. $f(\\pi)=0$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-10",
+    "tema": "continuidad",
+    "n": 10,
+    "enunciado": "Sea $f(x)=\\cos x$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El coseno es continuo. $f(0)=1$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-11",
+    "tema": "continuidad",
+    "n": 11,
+    "enunciado": "Sea $f(x)=\\begin{cases}2x+3 & x<0\\\\ x^2+x & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $3$. Límite derecho y valor $0$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-12",
+    "tema": "continuidad",
+    "n": 12,
+    "enunciado": "Sea $f(x)=\\begin{cases}x-2 & x<0\\\\ x^2+4x+1 & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $-2$. Límite derecho y valor $1$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-13",
+    "tema": "continuidad",
+    "n": 13,
+    "enunciado": "Sea $f(x)=\\begin{cases}3x+1 & x<0\\\\ x^2+2x-1 & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $1$. Límite derecho y valor $-1$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-14",
+    "tema": "continuidad",
+    "n": 14,
+    "enunciado": "Sea $f(x)=\\begin{cases}-x+4 & x<0\\\\ x^2+2x+2 & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $4$. Límite derecho y valor $2$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-15",
+    "tema": "continuidad",
+    "n": 15,
+    "enunciado": "Sea $f(x)=\\begin{cases}5x-1 & x<0\\\\ x^2+3x & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $-1$. Límite derecho y valor $0$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-16",
+    "tema": "continuidad",
+    "n": 16,
+    "enunciado": "Sea $f(x)=\\begin{cases}2x+1 & x<0\\\\ x^2-x+3 & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $1$. Límite derecho y valor $3$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-17",
+    "tema": "continuidad",
+    "n": 17,
+    "enunciado": "Sea $f(x)=\\begin{cases}4x-3 & x<0\\\\ x^2+2x-2 & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $-3$. Límite derecho y valor $-2$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-18",
+    "tema": "continuidad",
+    "n": 18,
+    "enunciado": "Sea $f(x)=\\begin{cases}x+5 & x<0\\\\ x^2+3x+1 & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $5$. Límite derecho y valor $1$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-19",
+    "tema": "continuidad",
+    "n": 19,
+    "enunciado": "Sea $f(x)=\\begin{cases}-2x+3 & x<0\\\\ x^2+x+4 & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $3$. Límite derecho y valor $4$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-20",
+    "tema": "continuidad",
+    "n": 20,
+    "enunciado": "Sea $f(x)=\\begin{cases}6x+2 & x<0\\\\ x^2-x & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $2$. Límite derecho y valor $0$. Los laterales no coinciden.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-21",
+    "tema": "continuidad",
+    "n": 21,
+    "enunciado": "Sea $f(x)=\\begin{cases}\\frac{x^2-9}{x-3} & x\\ne 3\\\\ 6 & x=3\\end{cases}$. ¿Cómo es $f$ en $x=3$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Para $x\\ne 3$ simplifica a $x+3$. El límite en $3$ es $6$ y coincide con el valor asignado.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-22",
+    "tema": "continuidad",
+    "n": 22,
+    "enunciado": "Sea $f(x)=\\begin{cases}\\frac{x^2-9}{x-3} & x\\ne 3\\\\ 5 & x=3\\end{cases}$. ¿Cómo es $f$ en $x=3$?",
+    "tipo": "opcion",
+    "respuesta": "removible",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El límite en $3$ es $6$, pero $f(3)=5$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-23",
+    "tema": "continuidad",
+    "n": 23,
+    "enunciado": "Sea $f(x)=\\begin{cases}\\frac{x^2-1}{x-1} & x\\ne 1\\\\ 2 & x=1\\end{cases}$. ¿Cómo es $f$ en $x=1$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Simplificando, el límite en $1$ es $2$; coincide con $f(1)$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-24",
+    "tema": "continuidad",
+    "n": 24,
+    "enunciado": "Sea $f(x)=\\begin{cases}\\frac{x^2-1}{x-1} & x\\ne 1\\\\ 0 & x=1\\end{cases}$. ¿Cómo es $f$ en $x=1$?",
+    "tipo": "opcion",
+    "respuesta": "removible",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El límite en $1$ es $2$, distinto de $f(1)=0$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-32",
+    "tema": "continuidad",
+    "n": 32,
+    "enunciado": "Sea $f(x)=\\tan x$. ¿Cómo es $f$ en $x=\\frac{\\pi}{4}$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "$\\tan x$ es continua donde $\\cos x\\ne 0$, y $\\cos\\frac{\\pi}{4}\\ne 0$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-33",
+    "tema": "continuidad",
+    "n": 33,
+    "enunciado": "Sea $f(x)=\\frac{1}{x-1}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El denominador vale $-1$, no es cero; función racional continua en ese punto.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-35",
+    "tema": "continuidad",
+    "n": 35,
+    "enunciado": "Sea $f(x)=\\begin{cases}\\frac{x^2-4}{x+2} & x\\ne -2\\\\ -4 & x=-2\\end{cases}$. ¿Cómo es $f$ en $x=-2$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Se simplifica a $x-2$; el límite en $-2$ es $-4$ y coincide con el valor.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-36",
+    "tema": "continuidad",
+    "n": 36,
+    "enunciado": "Sea $f(x)=\\begin{cases}\\frac{x^2-4}{x+2} & x\\ne -2\\\\ 0 & x=-2\\end{cases}$. ¿Cómo es $f$ en $x=-2$?",
+    "tipo": "opcion",
+    "respuesta": "removible",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "El límite en $-2$ es $-4$, distinto del valor $0$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-37",
+    "tema": "continuidad",
+    "n": 37,
+    "enunciado": "Sea $f(x)=\\begin{cases}2x+1 & x<1\\\\ x^2+2 & x\\ge 1\\end{cases}$. ¿Cómo es $f$ en $x=1$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Límite izquierdo $3$. Límite derecho y $f(1)$ valen $3$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-38",
+    "tema": "continuidad",
+    "n": 38,
+    "enunciado": "Sea $f(x)=\\begin{cases}x+2 & x<2\\\\ 3x-1 & x\\ge 2\\end{cases}$. ¿Cómo es $f$ en $x=2$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Izquierda $4$. Derecha y valor $5$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-39",
+    "tema": "continuidad",
+    "n": 39,
+    "enunciado": "Sea $f(x)=\\begin{cases}x^2 & x\\le -1\\\\ 2x+3 & x>-1\\end{cases}$. ¿Cómo es $f$ en $x=-1$?",
+    "tipo": "opcion",
+    "respuesta": "continua",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Izquierda y valor $1$. Derecha $1$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-40",
+    "tema": "continuidad",
+    "n": 40,
+    "enunciado": "Sea $f(x)=\\begin{cases}x^2+1 & x<0\\\\ 2-x & x\\ge 0\\end{cases}$. ¿Cómo es $f$ en $x=0$?",
+    "tipo": "opcion",
+    "respuesta": "salto",
+    "opciones": ["continua", "removible", "salto", "infinita"],
+    "solucion": "Izquierda $1$. Derecha y valor $2$.",
+    "chequeo": {
+      "clase": "continuidad-tipo"
+    }
+  },
+  {
+    "id": "con-41",
+    "tema": "continuidad",
+    "n": 41,
+    "enunciado": "Sea $f(x)=\\begin{cases}kx+2 & x<1\\\\ x^2+1 & x\\ge 1\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=1$.",
+    "tipo": "expresion",
+    "respuesta": "0",
+    "solucion": "Izquierda $k+2$. Derecha $2$. Igualamos $k+2=2$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-42",
+    "tema": "continuidad",
+    "n": 42,
+    "enunciado": "Sea $f(x)=\\begin{cases}2x+k & x<2\\\\ x^2-1 & x\\ge 2\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=2$.",
+    "tipo": "expresion",
+    "respuesta": "-1",
+    "solucion": "Izquierda $4+k$. Derecha $3$. Igualamos $4+k=3$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-44",
+    "tema": "continuidad",
+    "n": 44,
+    "enunciado": "Sea $f(x)=\\begin{cases}x^2+k & x<1\\\\ 3x & x\\ge 1\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=1$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "En $1$, izquierda $1+k$ y derecha $3$. Igualamos $1+k=3$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-45",
+    "tema": "continuidad",
+    "n": 45,
+    "enunciado": "Sea $f(x)=\\begin{cases}4-x & x<3\\\\ kx-2 & x\\ge 3\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=3$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Izquierda $1$. Derecha $3k-2$. Igualamos $1=3k-2$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-46",
+    "tema": "continuidad",
+    "n": 46,
+    "enunciado": "Sea $f(x)=\\begin{cases}x+4 & x<-1\\\\ x^2+k & x\\ge -1\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=-1$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Izquierda $3$. Derecha $1+k$. Igualamos $3=1+k$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-47",
+    "tema": "continuidad",
+    "n": 47,
+    "enunciado": "Sea $f(x)=\\begin{cases}2x-1 & x\\le 2\\\\ x^2-k & x>2\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=2$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Izquierda y valor $3$. Límite derecho $4-k$. Igualamos $3=4-k$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-48",
+    "tema": "continuidad",
+    "n": 48,
+    "enunciado": "Sea $f(x)=\\begin{cases}kx+1 & x\\le 1\\\\ 2x+3 & x>1\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=1$.",
+    "tipo": "expresion",
+    "respuesta": "4",
+    "solucion": "Izquierda y valor $k+1$. Derecha $5$. Igualamos $k+1=5$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-49",
+    "tema": "continuidad",
+    "n": 49,
+    "enunciado": "Sea $f(x)=\\begin{cases}x^2-1 & x<2\\\\ kx-1 & x\\ge 2\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=2$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Izquierda $3$. Derecha $2k-1$. Igualamos $3=2k-1$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  },
+  {
+    "id": "con-50",
+    "tema": "continuidad",
+    "n": 50,
+    "enunciado": "Sea $f(x)=\\begin{cases}3x+k & x<-2\\\\ x^2+1 & x\\ge -2\\end{cases}$. Halla $k$ para que $f$ sea continua en $x=-2$.",
+    "tipo": "expresion",
+    "respuesta": "11",
+    "solucion": "Izquierda $k-6$. Derecha $5$. Igualamos $k-6=5$.",
+    "chequeo": {
+      "clase": "continuidad-k"
+    }
+  }
+]
