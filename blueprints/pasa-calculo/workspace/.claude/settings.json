@@ -1,0 +1,50 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm ci)",
+      "Bash(npm audit)",
+      "Bash(npm test)",
+      "Bash(npm test:*)",
+      "Bash(npm run build)",
+      "Bash(npm run banco)",
+      "Bash(npm run banco:*)",
+      "Bash(npm run e2e)",
+      "Bash(npm run e2e:*)",
+      "Bash(npm run format)",
+      "Bash(npm run format:check)",
+      "Bash(npm run dev)",
+      "Bash(npm run preview)",
+      "Bash(npx playwright install chromium)",
+      "Bash(node scripts/probar-sitio.mjs)",
+      "Bash(node scripts/verificar-banco.mjs:*)",
+      "Bash(node scripts/verificar-dist.mjs:*)",
+      "Bash(node -e \"require('fs').cpSync('blueprints/pasa-calculo/workspace','.',{recursive:true,force:false})\")",
+      "Bash(test:*)",
+      "Bash(grep:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git init -b main)",
+      "Bash(git config user.name)",
+      "Bash(git config user.name:*)",
+      "Bash(git config user.email)",
+      "Bash(git config user.email:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git tag:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git rev-list:*)",
+      "Bash(git reset --hard step-*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(git push:*)",
+      "Bash(npm publish:*)",
+      "Bash(gh repo create:*)"
+    ]
+  }
+}

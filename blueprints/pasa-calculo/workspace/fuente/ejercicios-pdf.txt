@@ -1,0 +1,622 @@
+200 EJERCICIOS RESUELTOS
+DE CÁLCULO DIFERENCIAL E INTEGRAL
+50 de límites · 50 de continuidad · 50 de derivadas · 50 de integrales
+Nivel: básico–intermedio. Ejercicios pensados para practicar procedimientos fundamentales sin llegar a
+técnicas avanzadas.
+Cómo aprovechar este material
+Intenta resolver cada ejercicio antes de leer el procedimiento. Luego compara tus pasos, identifica la regla
+utilizada y vuelve a resolver los que hayas fallado sin mirar la solución.
+Convenciones: sin = seno; cos = coseno; tan = tangente; ln = logaritmo natural; C = constante de
+integración.
+LÍMITES
+Evalúa sustituyendo cuando sea posible; si aparece 0/0, prueba factorizar o racionalizar. En límites
+trigonométricos usa sin u/u → 1 y (1−cos u)/u² → 1/2.
+1. lim x→2 (3x²−x+1)
+Procedimiento: Sustitución directa: 3(2)²−2+1 = 12−2+1.
+Respuesta: 11
+2. lim x→−1 (x³+2x²−4)
+Procedimiento: Sustitución directa: (−1)³+2(−1)²−4 = −1+2−4.
+Respuesta: −3
+3. lim x→3 (2x²+5x−1)
+Procedimiento: Sustitución directa: 2(3)²+5(3)−1 = 18+15−1.
+Respuesta: 32
+4. lim x→0 (4x³−7x+6)
+Procedimiento: Sustitución directa: 0−0+6.
+Respuesta: 6
+5. lim x→−2 (x²−3x+2)
+Procedimiento: Sustitución directa: 4+6+2.
+Respuesta: 12
+6. lim x→1 (x⁴+2x²+3)
+Procedimiento: Sustitución directa: 1+2+3.
+Respuesta: 6
+7. lim x→2 (x²+3x)/(x+1)
+Procedimiento: Sustitución directa: (4+6)/3.
+Respuesta: 10/3
+8. lim x→−1 (2x²+1)/(x−3)
+Procedimiento: Sustitución directa: 3/(−4).
+Respuesta: −3/4
+9. lim x→4 √(x+5)
+Procedimiento: La raíz es continua: √(4+5).
+Respuesta: 3
+10. lim x→0 (sin x)/x
+Procedimiento: Límite trigonométrico fundamental.
+Respuesta: 1
+11. lim x→3 (x²−9)/(x−3)
+Procedimiento: Factoriza: (x−3)(x+3)/(x−3). Para x≠3 queda x+3; evalúa.
+Respuesta: 6
+12. lim x→−2 (x²+5x+6)/(x+2)
+Procedimiento: Factoriza: (x+2)(x+3)/(x+2). Queda x+3.
+Respuesta: 1
+13. lim x→1 (x²−1)/(x−1)
+Procedimiento: Factoriza: (x−1)(x+1)/(x−1). Queda x+1.
+Respuesta: 2
+14. lim x→4 (x²−16)/(x−4)
+Procedimiento: Factoriza: (x−4)(x+4)/(x−4). Queda x+4.
+Respuesta: 8
+15. lim x→2 (x²−5x+6)/(x−2)
+Procedimiento: Factoriza: (x−2)(x−3)/(x−2). Queda x−3.
+Respuesta: −1
+16. lim x→−3 (x²+6x+9)/(x+3)
+Procedimiento: Factoriza: (x+3)²/(x+3). Queda x+3.
+Respuesta: 0
+17. lim x→5 (x²−25)/(x−5)
+Procedimiento: Factoriza: (x−5)(x+5)/(x−5). Queda x+5.
+Respuesta: 10
+18. lim x→1 (x³−1)/(x−1)
+Procedimiento: Factoriza suma de cubos: (x−1)(x²+x+1). Evalúa 1+1+1.
+Respuesta: 3
+19. lim x→2 (x³−8)/(x−2)
+Procedimiento: Diferencia de cubos: (x−2)(x²+2x+4). Evalúa 4+4+4.
+Respuesta: 12
+20. lim x→−1 (x³+1)/(x+1)
+Procedimiento: Suma de cubos: (x+1)(x²−x+1). Evalúa 1+1+1.
+Respuesta: 3
+21. lim x→0 (√(x+9)−3)/x
+Procedimiento: Racionaliza: multiplica por (√(x+9)+3). Queda 1/(√(x+9)+3).
+Respuesta: 1/6
+22. lim x→5 (√(x+4)−3)/(x−5)
+Procedimiento: Racionaliza: (x+4−9)/[(x−5)(√(x+4)+3)]. Cancela x−5.
+Respuesta: 1/6
+23. lim x→0 (√(1+2x)−1)/x
+Procedimiento: Racionaliza: 2/[√(1+2x)+1].
+Respuesta: 1
+24. lim x→3 (√(x+6)−3)/(x−3)
+Procedimiento: Racionaliza: (x−3)/[(x−3)(√(x+6)+3)].
+Respuesta: 1/6
+25. lim x→0 (√(4+x)−2)/x
+Procedimiento: Racionaliza: 1/[√(4+x)+2].
+Respuesta: 1/4
+26. lim x→0 (1−cos x)/x²
+Procedimiento: Límite trigonométrico fundamental.
+Respuesta: 1/2
+27. lim x→0 (sin 5x)/(x)
+Procedimiento: Escribe 5·sin(5x)/(5x).
+Respuesta: 5
+28. lim x→0 (tan 3x)/(x)
+Procedimiento: Escribe 3·tan(3x)/(3x).
+Respuesta: 3
+29. lim x→0 (sin 2x)/(sin 7x)
+Procedimiento: Reescribe como (2/7)[sin 2x/(2x)]/[sin 7x/(7x)].
+Respuesta: 2/7
+30. lim x→0 (1−cos 4x)/x²
+Procedimiento: Usa 1−cos u ~ u²/2: (4x)²/(2x²).
+Respuesta: 8
+31. lim x→∞ (3x²+2x−1)/(x²−4)
+Procedimiento: Divide entre x²; dominan los coeficientes principales.
+Respuesta: 3
+32. lim x→∞ (5x³−x)/(2x³+7)
+Procedimiento: Mismo grado: cociente de coeficientes principales.
+Respuesta: 5/2
+33. lim x→∞ (2x+1)/(x²+3)
+Procedimiento: El denominador crece más rápido que el numerador.
+Respuesta: 0
+34. lim x→∞ (4x²−1)/(x³+2)
+Procedimiento: Grado del denominador mayor: el cociente tiende a cero.
+Respuesta: 0
+35. lim x→∞ (7x³+2)/(x²−1)
+Procedimiento: El grado del numerador es mayor; el término dominante es 7x.
+Respuesta: +∞
+36. lim x→−∞ (7x³+2)/(x²−1)
+Procedimiento: El término dominante es 7x; cuando x→−∞, 7x→−∞.
+Respuesta: −∞
+37. lim x→∞ (√(x²+4x)/x)
+Procedimiento: Para x positivo: √(x²(1+4/x))/x = √(1+4/x).
+Respuesta: 1
+38. lim x→∞ (2x²+3)/(x²−5x)
+Procedimiento: Divide entre x²: (2+3/x²)/(1−5/x).
+Respuesta: 2
+39. lim x→∞ (x²−3x)/(4x²+1)
+Procedimiento: Mismo grado: cociente 1/4.
+Respuesta: 1/4
+40. lim x→∞ (6x⁴+x)/(3x⁴−2)
+Procedimiento: Mismo grado: cociente 6/3.
+Respuesta: 2
+41. lim x→0 (eˣ−1)/x
+Procedimiento: Límite fundamental de la exponencial.
+Respuesta: 1
+42. lim x→0 (ln(1+x))/x
+Procedimiento: Límite fundamental del logaritmo natural.
+Respuesta: 1
+43. lim x→2 (x²−4)/(x²−3x+2)
+Procedimiento: Factoriza: (x−2)(x+2)/[(x−1)(x−2)]. Queda (x+2)/(x−1).
+Respuesta: 4
+44. lim x→1 (x²−3x+2)/(x−1)
+Procedimiento: Factoriza: (x−1)(x−2)/(x−1). Queda x−2.
+Respuesta: −1
+45. lim x→−2 (x²−4)/(x²+3x+2)
+Procedimiento: Factoriza: (x−2)(x+2)/[(x+1)(x+2)]. Queda (x−2)/(x+1).
+Respuesta: 4
+46. lim x→0 (sin 4x)/(sin 2x)
+Procedimiento: Reescribe usando los límites fundamentales: 4/2.
+Respuesta: 2
+47. lim x→0 (tan 2x)/(sin 5x)
+Procedimiento: Equivale a (2x)/(5x), usando tan u/u→1 y sin u/u→1.
+Respuesta: 2/5
+48. lim x→∞ (√(9x²+x)/x)
+Procedimiento: Para x positivo: √(9+1/x).
+Respuesta: 3
+49. lim x→∞ (3x²−x+1)/(6x²+4)
+Procedimiento: Mismo grado; cociente de coeficientes principales.
+Respuesta: 1/2
+50. lim x→∞ (8x³−2x)/(4x³+5)
+Procedimiento: Los polinomios tienen el mismo grado; se dividen los coeficientes principales: 8/4.
+Respuesta: 2
+CONTINUIDAD
+Una función es continua en a si existe f(a), existe el límite cuando x→a y ambos coinciden. En funciones por
+tramos, compara los límites laterales y el valor de la función.
+1. f(x)=x²−3x+1 en x=2
+Procedimiento: Es un polinomio, continuo en todo ℝ. f(2)=4−6+1.
+Respuesta: Continua; valor = −1.
+2. f(x)=3x+5 en x=−1
+Procedimiento: Es lineal, por tanto continua. f(−1)=−3+5.
+Respuesta: Continua; valor = 2.
+3. f(x)=(x²−1)/(x−1) en x=1
+Procedimiento: El denominador se anula. Aunque se simplifica a x+1 para x≠1, f(1) no está definida.
+Respuesta: Discontinua removible en x=1.
+4. f(x)=(x²−4)/(x−2) en x=2
+Procedimiento: Para x≠2, f(x)=x+2. El límite es 4, pero f(2) no existe.
+Respuesta: Discontinua removible; límite = 4.
+5. f(x)=1/(x−3) en x=3
+Procedimiento: El denominador es cero y el valor crece sin límite cerca de 3.
+Respuesta: Discontinua infinita (asíntota vertical).
+6. f(x)=√(x−2) en x=2
+Procedimiento: Está definida para x≥2 y es continua en el extremo de su dominio. f(2)=0.
+Respuesta: Continua por la derecha en x=2.
+7. f(x)=|x| en x=0
+Procedimiento: Límite por izquierda y derecha vale 0; coincide con f(0)=0.
+Respuesta: Continua en x=0.
+8. f(x)=⌊x⌋ en x=2
+Procedimiento: Por la izquierda se aproxima a 1 y por la derecha vale 2; los laterales no coinciden.
+Respuesta: Discontinua de salto en x=2.
+9. f(x)=sin x en x=π
+Procedimiento: Seno es continuo. f(π)=0.
+Respuesta: Continua; valor = 0.
+10. f(x)=cos x en x=0
+Procedimiento: Coseno es continuo. f(0)=1.
+Respuesta: Continua; valor = 1.
+11. f(x)={ 2x+(3), si x<0; x²+(1)x+(0), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = 3. Límite derecho = f(0) = 0. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo 3 y derecho/valor 0.
+12. f(x)={ 1x+(-2), si x<0; x²+(4)x+(1), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = -2. Límite derecho = f(0) = 1. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo -2 y derecho/valor 1.
+13. f(x)={ 3x+(1), si x<0; x²+(2)x+(-1), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = 1. Límite derecho = f(0) = -1. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo 1 y derecho/valor -1.
+14. f(x)={ -1x+(4), si x<0; x²+(2)x+(2), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = 4. Límite derecho = f(0) = 2. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo 4 y derecho/valor 2.
+15. f(x)={ 5x+(-1), si x<0; x²+(3)x+(0), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = -1. Límite derecho = f(0) = 0. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo -1 y derecho/valor 0.
+16. f(x)={ 2x+(1), si x<0; x²+(-1)x+(3), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = 1. Límite derecho = f(0) = 3. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo 1 y derecho/valor 3.
+17. f(x)={ 4x+(-3), si x<0; x²+(2)x+(-2), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = -3. Límite derecho = f(0) = -2. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo -3 y derecho/valor -2.
+18. f(x)={ 1x+(5), si x<0; x²+(3)x+(1), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = 5. Límite derecho = f(0) = 1. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo 5 y derecho/valor 1.
+19. f(x)={ -2x+(3), si x<0; x²+(1)x+(4), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = 3. Límite derecho = f(0) = 4. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo 3 y derecho/valor 4.
+20. f(x)={ 6x+(2), si x<0; x²+(-1)x+(0), si x≥0 }. ¿Es continua en 0?
+Procedimiento: Límite izquierdo = 2. Límite derecho = f(0) = 0. Se comparan ambos valores.
+Respuesta: No es continua: límite izquierdo 2 y derecho/valor 0.
+21. f(x)=(x²−9)/(x−3), x≠3; f(3)=6
+Procedimiento: Para x≠3, simplifica a x+3. El límite en 3 es 6 y coincide con el valor asignado.
+Respuesta: Continua en x=3.
+22. f(x)=(x²−9)/(x−3), x≠3; f(3)=5
+Procedimiento: El límite en 3 es 6, pero f(3)=5.
+Respuesta: Discontinua en x=3.
+23. f(x)= (x²−1)/(x−1), x≠1; f(1)=2
+Procedimiento: Simplificando, el límite en 1 es 2; coincide con f(1).
+Respuesta: Continua en x=1.
+24. f(x)= (x²−1)/(x−1), x≠1; f(1)=0
+Procedimiento: El límite en 1 es 2, distinto de f(1)=0.
+Respuesta: Discontinua en x=1.
+25. f(x)=1/(x²−4)
+Procedimiento: El denominador no puede ser cero: x²−4≠0.
+Respuesta: Continua en (−∞,−2), (−2,2) y (2,∞).
+26. f(x)=√(5−x)
+Procedimiento: Se requiere 5−x≥0, es decir x≤5. La raíz es continua en su dominio.
+Respuesta: Continua en (−∞,5].
+27. f(x)=ln(x−1)
+Procedimiento: Se requiere x−1>0, es decir x>1. El logaritmo es continuo en su dominio.
+Respuesta: Continua en (1,∞).
+28. f(x)= (x+2)/(x²−1)
+Procedimiento: El denominador se anula en x=−1 y x=1.
+Respuesta: Continua en (−∞,−1), (−1,1) y (1,∞).
+29. f(x)=√(x²+1)
+Procedimiento: El radicando siempre es positivo; composición de funciones continuas.
+Respuesta: Continua en todo ℝ.
+30. f(x)=|x−3|
+Procedimiento: El valor absoluto de una función lineal es continuo.
+Respuesta: Continua en todo ℝ.
+31. f(x)=x³−2x+7
+Procedimiento: Todo polinomio es continuo en ℝ.
+Respuesta: Continua en todo ℝ.
+32. f(x)=tan x en x=π/4
+Procedimiento: tan x es continua donde cos x≠0. cos(π/4)≠0.
+Respuesta: Continua en x=π/4.
+33. f(x)=1/(x−1) en x=0
+Procedimiento: El denominador vale −1, no es cero; función racional continua en ese punto.
+Respuesta: Continua en x=0.
+34. f(x)=√(x+4) en x=−4
+Procedimiento: Está definida desde −4 y es continua por la derecha en el extremo.
+Respuesta: Continua por la derecha en x=−4.
+35. f(x)= (x²−4)/(x+2), x≠−2; f(−2)=−4
+Procedimiento: Se simplifica a x−2; el límite en −2 es −4 y coincide con el valor.
+Respuesta: Continua en x=−2.
+36. f(x)= (x²−4)/(x+2), x≠−2; f(−2)=0
+Procedimiento: El límite en −2 es −4, distinto del valor 0.
+Respuesta: Discontinua en x=−2.
+37. f(x)= {2x+1 si x<1; x²+2 si x≥1} en x=1
+Procedimiento: Límite izquierdo = 3. Límite derecho = f(1)=3.
+Respuesta: Continua en x=1.
+38. f(x)= {x+2 si x<2; 3x−1 si x≥2} en x=2
+Procedimiento: Izquierda = 4. Derecha y valor = 5.
+Respuesta: Discontinua de salto en x=2.
+39. f(x)= {x² si x≤−1; 2x+3 si x>−1} en x=−1
+Procedimiento: Izquierda y valor = 1. Derecha = 1.
+Respuesta: Continua en x=−1.
+40. f(x)= {x²+1 si x<0; 2−x si x≥0} en x=0
+Procedimiento: Izquierda = 1. Derecha y valor = 2.
+Respuesta: Discontinua de salto en x=0.
+41. f(x)= {kx+2 si x<1; x²+1 si x≥1}. Halla k para continuidad en 1.
+Procedimiento: Izquierda = k+2. Derecha = 2. Igualamos k+2=2.
+Respuesta: k=0.
+42. f(x)= {2x+k si x<2; x²−1 si x≥2}. Halla k para continuidad en 2.
+Procedimiento: Izquierda = 4+k. Derecha = 3. Igualamos 4+k=3.
+Respuesta: k=−1.
+43. f(x)= {ax+1 si x<0; x²+1 si x≥0}. ¿Qué valor de a garantiza continuidad?
+Procedimiento: En 0, izquierda = 1 y derecha = 1 para cualquier a.
+Respuesta: Cualquier número real a.
+44. f(x)= {x²+k si x<1; 3x si x≥1}. Halla k.
+Procedimiento: En 1, izquierda = 1+k y derecha = 3. Igualamos.
+Respuesta: k=2.
+45. f(x)= {4−x si x<3; kx−2 si x≥3}. Halla k.
+Procedimiento: Izquierda = 1. Derecha = 3k−2. Igualamos 1=3k−2.
+Respuesta: k=1.
+46. f(x)= {x+4 si x<−1; x²+k si x≥−1}. Halla k.
+Procedimiento: Izquierda = 3. Derecha = 1+k. Igualamos.
+Respuesta: k=2.
+47. f(x)= {2x−1 si x≤2; x²−k si x>2}. Halla k.
+Procedimiento: Izquierda y valor = 3. Límite derecho = 4−k. Igualamos.
+Respuesta: k=1.
+48. f(x)= {kx+1 si x≤1; 2x+3 si x>1}. Halla k.
+Procedimiento: Izquierda y valor = k+1. Derecha = 5. Igualamos.
+Respuesta: k=4.
+49. f(x)= {x²−1 si x<2; kx−1 si x≥2}. Halla k.
+Procedimiento: Izquierda = 3. Derecha = 2k−1. Igualamos.
+Respuesta: k=2.
+50. f(x)= {3x+k si x<−2; x²+1 si x≥−2}. Halla k.
+Procedimiento: Izquierda = k−6. Derecha = 5. Igualamos.
+Respuesta: k=11.
+DERIVADAS
+Identifica la regla antes de operar: potencia, cadena, producto o cociente. En funciones trigonométricas y
+exponenciales, aplica además la regla de la cadena cuando el argumento no sea simplemente x.
+1. f(x)=5x⁴−3x²+7
+Procedimiento: Regla de la potencia término a término: 20x³−6x.
+Respuesta: f'(x)=20x³−6x
+2. f(x)=3x⁵+2x³−x
+Procedimiento: Deriva cada potencia: 15x⁴+6x²−1.
+Respuesta: f'(x)=15x⁴+6x²−1
+3. f(x)=7x³−4x²+9
+Procedimiento: 21x²−8x.
+Respuesta: f'(x)=21x²−8x
+4. f(x)=√x
+Procedimiento: Escribe x^(1/2); deriva: (1/2)x^(−1/2).
+Respuesta: f'(x)=1/(2√x)
+5. f(x)=1/x³
+Procedimiento: Escribe x^(−3); deriva: −3x^(−4).
+Respuesta: f'(x)=−3/x⁴
+6. f(x)=4√x−2x²
+Procedimiento: Deriva: 4·(1/2)x^(−1/2)−4x.
+Respuesta: f'(x)=2/√x−4x
+7. f(x)=(2x+1)⁵
+Procedimiento: Regla de la cadena: 5(2x+1)⁴·2.
+Respuesta: f'(x)=10(2x+1)⁴
+8. f(x)=(x²+3)⁴
+Procedimiento: Cadena: 4(x²+3)³·2x.
+Respuesta: f'(x)=8x(x²+3)³
+9. f(x)=√(3x+2)
+Procedimiento: Cadena: (1/2)(3x+2)^(−1/2)·3.
+Respuesta: f'(x)=3/[2√(3x+2)]
+10. f(x)=1/(x²+1)
+Procedimiento: Escribe (x²+1)^(−1); cadena: −1(x²+1)^(−2)·2x.
+Respuesta: f'(x)=−2x/(x²+1)²
+11. f(x)=sin x
+Procedimiento: Derivada básica del seno.
+Respuesta: f'(x)=cos x
+12. f(x)=cos x
+Procedimiento: Derivada básica del coseno.
+Respuesta: f'(x)=−sin x
+13. f(x)=tan x
+Procedimiento: Derivada básica de tangente.
+Respuesta: f'(x)=sec²x
+14. f(x)=3sin x−2cos x
+Procedimiento: Deriva término a término: 3cos x+2sin x.
+Respuesta: f'(x)=3cos x+2sin x
+15. f(x)=sin(4x)
+Procedimiento: Cadena: cos(4x)·4.
+Respuesta: f'(x)=4cos(4x)
+16. f(x)=cos(2x+1)
+Procedimiento: Cadena: −sin(2x+1)·2.
+Respuesta: f'(x)=−2sin(2x+1)
+17. f(x)=tan(5x)
+Procedimiento: Cadena: sec²(5x)·5.
+Respuesta: f'(x)=5sec²(5x)
+18. f(x)=eˣ
+Procedimiento: La derivada de eˣ es eˣ.
+Respuesta: f'(x)=eˣ
+19. f(x)=e^(3x)
+Procedimiento: Cadena: e^(3x)·3.
+Respuesta: f'(x)=3e^(3x)
+20. f(x)=ln x
+Procedimiento: Derivada básica del logaritmo natural.
+Respuesta: f'(x)=1/x
+21. f(x)=ln(2x+5)
+Procedimiento: Cadena: (1/(2x+5))·2.
+Respuesta: f'(x)=2/(2x+5)
+22. f(x)=x² sin x
+Procedimiento: Producto: (2x)sin x+x²cos x.
+Respuesta: f'(x)=2x sin x+x² cos x
+23. f(x)=(x+1)(x²−3)
+Procedimiento: Producto: 1·(x²−3)+(x+1)·2x; simplifica.
+Respuesta: f'(x)=3x²+2x−3
+24. f(x)=x³ cos x
+Procedimiento: Producto: 3x²cos x−x³sin x.
+Respuesta: f'(x)=3x²cos x−x³sin x
+25. f(x)=(x²+1)(x³−2)
+Procedimiento: Producto: 2x(x³−2)+3x²(x²+1).
+Respuesta: f'(x)=5x⁴+3x²−4x
+26. f(x)=(x²+1)/x
+Procedimiento: Simplifica a x+1/x; deriva.
+Respuesta: f'(x)=1−1/x²
+27. f(x)=(2x+1)/(x−1)
+Procedimiento: Cociente: [2(x−1)−(2x+1)]/(x−1)².
+Respuesta: f'(x)=−3/(x−1)²
+28. f(x)=(x²+3)/(x+1)
+Procedimiento: Cociente: [2x(x+1)−(x²+3)]/(x+1)².
+Respuesta: f'(x)=(x²+2x−3)/(x+1)²
+29. f(x)=sin x / x
+Procedimiento: Cociente: (x cos x−sin x)/x².
+Respuesta: f'(x)=(x cos x−sin x)/x²
+30. f(x)=x² eˣ
+Procedimiento: Producto: 2xeˣ+x²eˣ.
+Respuesta: f'(x)=eˣ(x²+2x)
+31. f(x)=arcsin x
+Procedimiento: Derivada básica de arcsin.
+Respuesta: f'(x)=1/√(1−x²)
+32. f(x)=arctan(2x)
+Procedimiento: Cadena: 2/[1+(2x)²].
+Respuesta: f'(x)=2/(1+4x²)
+33. f(x)=x⁴−6x²+2x en x=2
+Procedimiento: f'(x)=4x³−12x+2; evalúa en 2: 32−24+2.
+Respuesta: f'(2)=10
+34. f(x)=3x²−5x+1 en x=−1
+Procedimiento: f'(x)=6x−5; evalúa: −6−5.
+Respuesta: f'(−1)=−11
+35. f(x)=x³+2x en x=1
+Procedimiento: f'(x)=3x²+2; evalúa en 1.
+Respuesta: f'(1)=5
+36. f(x)=(x²+1)³
+Procedimiento: Cadena: 3(x²+1)²·2x.
+Respuesta: f'(x)=6x(x²+1)²
+37. f(x)=(5−x)⁴
+Procedimiento: Cadena: 4(5−x)³·(−1).
+Respuesta: f'(x)=−4(5−x)³
+38. f(x)=√(x²+4)
+Procedimiento: Cadena: (1/2)(x²+4)^(−1/2)·2x.
+Respuesta: f'(x)=x/√(x²+4)
+39. f(x)=ln(x²+1)
+Procedimiento: Cadena: 1/(x²+1)·2x.
+Respuesta: f'(x)=2x/(x²+1)
+40. f(x)=e^(x²)
+Procedimiento: Cadena: e^(x²)·2x.
+Respuesta: f'(x)=2xe^(x²)
+41. f(x)=sin²x
+Procedimiento: Cadena: 2sin x·cos x.
+Respuesta: f'(x)=2sin x cos x
+42. f(x)=cos³x
+Procedimiento: Cadena: 3cos²x·(−sin x).
+Respuesta: f'(x)=−3cos²x sin x
+43. f(x)=x ln x
+Procedimiento: Producto: 1·ln x+x·(1/x).
+Respuesta: f'(x)=ln x+1
+44. f(x)=x² ln x
+Procedimiento: Producto: 2x ln x+x²·1/x.
+Respuesta: f'(x)=2x ln x+x
+45. f(x)=(x−2)²(x+1)
+Procedimiento: Producto: 2(x−2)(x+1)+(x−2)²; factoriza.
+Respuesta: f'(x)=(x−2)(3x)
+46. f(x)= (x+2)³/(x)
+Procedimiento: Cociente o simplifica x²+6x+12+8/x; deriva.
+Respuesta: f'(x)=2x+6−8/x²
+47. f(x)= (3x−1)²
+Procedimiento: Cadena: 2(3x−1)·3.
+Respuesta: f'(x)=6(3x−1)
+48. f(x)= 1/√(x+1)
+Procedimiento: Escribe (x+1)^(−1/2); deriva con cadena.
+Respuesta: f'(x)=−1/[2(x+1)^(3/2)]
+49. f(x)= (x²−1)⁵
+Procedimiento: Cadena: 5(x²−1)⁴·2x.
+Respuesta: f'(x)=10x(x²−1)⁴
+50. f(x)= (x²+2x+1)⁴
+Procedimiento: Regla de la cadena: 4(x²+2x+1)³·(2x+2).
+Respuesta: f'(x)=8(x+1)(x²+2x+1)³
+INTEGRALES
+En integrales indefinidas no olvides +C. Para potencias aumenta el exponente en uno y divide entre el
+nuevo exponente. En sustitución, busca una función acompañada de su derivada.
+1. ∫(4x³−6x+2) dx
+Procedimiento: Integra término a término: 4·x⁴/4 − 6·x²/2 + 2x.
+Respuesta: x⁴−3x²+2x+C
+2. ∫(5x⁴+3x²−7) dx
+Procedimiento: Aplica ∫xⁿdx=xⁿ⁺¹/(n+1): x⁵+ x³−7x.
+Respuesta: x⁵+x³−7x+C
+3. ∫(6x⁵−2x³) dx
+Procedimiento: 6·x⁶/6 − 2·x⁴/4.
+Respuesta: x⁶−x⁴/2+C
+4. ∫(3√x+2) dx
+Procedimiento: Escribe 3x^(1/2)+2 e integra: 2x^(3/2)+2x.
+Respuesta: 2x^(3/2)+2x+C
+5. ∫(2/x) dx
+Procedimiento: Usa ∫1/x dx=ln|x|.
+Respuesta: 2ln|x|+C
+6. ∫(1/√x) dx
+Procedimiento: Escribe x^(−1/2); integra: x^(1/2)/(1/2).
+Respuesta: 2√x+C
+7. ∫(3x²+4x−1) dx
+Procedimiento: Integra cada término: x³+2x²−x.
+Respuesta: x³+2x²−x+C
+8. ∫(8x⁷−3x²) dx
+Procedimiento: 8·x⁸/8−3·x³/3.
+Respuesta: x⁸−x³+C
+9. ∫(5x⁴−4/x²) dx
+Procedimiento: Escribe 5x⁴−4x^(−2); integra.
+Respuesta: x⁵+4/x+C
+10. ∫(2x+1)⁶ dx
+Procedimiento: Sustituye u=2x+1, du=2dx; integra u⁶/2.
+Respuesta: (2x+1)⁷/14+C
+11. ∫cos x dx
+Procedimiento: Antiderivada básica del coseno.
+Respuesta: sin x+C
+12. ∫sin x dx
+Procedimiento: Antiderivada básica del seno.
+Respuesta: −cos x+C
+13. ∫sec²x dx
+Procedimiento: Antiderivada básica de sec²x.
+Respuesta: tan x+C
+14. ∫csc²x dx
+Procedimiento: Antiderivada básica de csc²x.
+Respuesta: −cot x+C
+15. ∫(3cos x−2sin x) dx
+Procedimiento: Integra término a término: 3sin x+2cos x.
+Respuesta: 3sin x+2cos x+C
+16. ∫cos(4x) dx
+Procedimiento: Sustitución u=4x, du=4dx.
+Respuesta: sin(4x)/4+C
+17. ∫sin(5x) dx
+Procedimiento: Sustitución u=5x.
+Respuesta: −cos(5x)/5+C
+18. ∫eˣ dx
+Procedimiento: La exponencial es su propia antiderivada.
+Respuesta: eˣ+C
+19. ∫e^(3x) dx
+Procedimiento: Sustitución u=3x; divide entre 3.
+Respuesta: e^(3x)/3+C
+20. ∫1/(2x+1) dx
+Procedimiento: u=2x+1, du=2dx; aparece factor 1/2.
+Respuesta: (1/2)ln|2x+1|+C
+21. ∫2x(x²+1)⁴ dx
+Procedimiento: u=x²+1; du=2x dx; integra u⁴.
+Respuesta: (x²+1)⁵/5+C
+22. ∫3(3x+2)⁵ dx
+Procedimiento: u=3x+2; du=3dx; integra u⁵.
+Respuesta: (3x+2)⁶/6+C
+23. ∫x√(x²+4) dx
+Procedimiento: u=x²+4; du=2x dx; queda (1/2)∫u^(1/2)du.
+Respuesta: (x²+4)^(3/2)/3+C
+24. ∫(2x+3)/(x²+3x+1) dx
+Procedimiento: El numerador es la derivada del denominador. Usa ln|u|.
+Respuesta: ln|x²+3x+1|+C
+25. ∫cos(2x+1) dx
+Procedimiento: u=2x+1; integra cos u y divide entre 2.
+Respuesta: sin(2x+1)/2+C
+26. ∫sin(3x−2) dx
+Procedimiento: u=3x−2; integra seno y divide entre 3.
+Respuesta: −cos(3x−2)/3+C
+27. ∫1/(x²+1) dx
+Procedimiento: Antiderivada estándar de 1/(1+x²).
+Respuesta: arctan x+C
+28. ∫1/√(1−x²) dx
+Procedimiento: Antiderivada estándar de arcsin.
+Respuesta: arcsin x+C
+29. ∫(1/x+4eˣ) dx
+Procedimiento: Integra cada término por separado.
+Respuesta: ln|x|+4eˣ+C
+30. ∫(2x³+3cos x) dx
+Procedimiento: Integra: x⁴/2+3sin x.
+Respuesta: x⁴/2+3sin x+C
+31. ∫₀² 3x² dx
+Procedimiento: Primitiva x³. Evalúa [x³]₀²=8−0.
+Respuesta: 8
+32. ∫₁³ (2x+1) dx
+Procedimiento: Primitiva x²+x. Evalúa (9+3)−(1+1).
+Respuesta: 10
+33. ∫₀π sin x dx
+Procedimiento: Primitiva −cos x. Evalúa −cosπ−(−cos0)=1+1.
+Respuesta: 2
+34. ∫₀^(π/2) cos x dx
+Procedimiento: Primitiva sin x. Evalúa sin(π/2)−sin0.
+Respuesta: 1
+35. ∫₁² 1/x dx
+Procedimiento: Primitiva ln|x|. Evalúa ln2−ln1.
+Respuesta: ln 2
+36. ∫₀¹ 2x e^(x²) dx
+Procedimiento: u=x²; límites 0 y 1. Queda ∫₀¹eᵘdu.
+Respuesta: e−1
+37. ∫₀¹ 6x(3x²+1)² dx
+Procedimiento: u=3x²+1, du=6x dx; límites 1 y 4. Integra u².
+Respuesta: (4³−1³)/3=21
+38. ∫₀² (x+1)² dx
+Procedimiento: Expande x²+2x+1. Primitiva x³/3+x²+x; evalúa en 2.
+Respuesta: 26/3
+39. ∫₀¹ (3x²+2x) dx
+Procedimiento: Primitiva x³+x². Evalúa en 1 menos 0.
+Respuesta: 2
+40. ∫₀^(π/4) sec²x dx
+Procedimiento: Primitiva tan x. Evalúa tan(π/4)−tan0.
+Respuesta: 1
+41. ∫(4x−3)/(2x²−3x+5) dx
+Procedimiento: El numerador es la derivada del denominador.
+Respuesta: ln|2x²−3x+5|+C
+42. ∫(5x⁴)/(x⁵+2) dx
+Procedimiento: u=x⁵+2; du=5x⁴dx.
+Respuesta: ln|x⁵+2|+C
+43. ∫(2x)/(x²−9) dx
+Procedimiento: u=x²−9; du=2x dx.
+Respuesta: ln|x²−9|+C
+44. ∫(x+1)⁴ dx
+Procedimiento: Sustitución u=x+1, du=dx.
+Respuesta: (x+1)⁵/5+C
+45. ∫(7−2x)³ dx
+Procedimiento: u=7−2x; du=−2dx; factor −1/2.
+Respuesta: −(7−2x)⁴/8+C
+46. ∫(2x−5)⁻² dx
+Procedimiento: u=2x−5; du=2dx. Integra u⁻² y divide entre 2.
+Respuesta: −1/[2(2x−5)]+C
+47. ∫(x²+1)/x dx
+Procedimiento: Separa: x+1/x.
+Respuesta: x²/2+ln|x|+C
+48. ∫(3x²−4)/x dx
+Procedimiento: Separa: 3x−4/x.
+Respuesta: 3x²/2−4ln|x|+C
+49. ∫(2sin x+3cos x) dx
+Procedimiento: Integra cada función trigonométrica.
+Respuesta: −2cos x+3sin x+C
+50. ∫(4e^(2x)−3/x) dx
+Procedimiento: Integra e^(2x) dividiendo entre 2; integra 1/x como ln|x|.
+Respuesta: 2e^(2x)−3ln|x|+C

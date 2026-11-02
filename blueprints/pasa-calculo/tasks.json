@@ -1,0 +1,444 @@
+[
+  {
+    "id": "E1-T1",
+    "title": "Crear estructura y tokens",
+    "epic": "01-base",
+    "dependencies": [],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `npm run build` runs THE SYSTEM SHALL exit 0 with `astro check` reporting 0 errors and write `dist/index.html`.",
+      "WHEN `node scripts/probar-sitio.mjs` serves `dist/` at `http://localhost:4321/pasa-calculo/` THE SYSTEM SHALL answer status 200 with a body containing `Pasa Cálculo`, and the script SHALL exit 0.",
+      "WHEN `dist/index.html` is read THE SYSTEM SHALL contain `lang=\"es\"` and the description `Reto diario gratis de 3 ejercicios de Cálculo.`.",
+      "WHEN JavaScript is unavailable THE SYSTEM SHALL offer the text `Activa JavaScript para hacer el reto de hoy.` inside `noscript`.",
+      "WHEN `npm run e2e -- e2e/humo.spec.ts` runs against `npm run preview` THE SYSTEM SHALL find `Pasa Cálculo` visible at `./` and exit 0.",
+      "WHEN `npm run format:check` runs from the project root with `blueprints/` present THE SYSTEM SHALL exit 0."
+    ],
+    "verify": [
+      "npm run format:check",
+      "npm run build",
+      "node scripts/probar-sitio.mjs",
+      "npm run e2e -- e2e/humo.spec.ts",
+      "grep -q 'lang=\"es\"' dist/index.html",
+      "grep -q 'Reto diario gratis de 3 ejercicios de Cálculo.' dist/index.html",
+      "grep -q 'Activa JavaScript para hacer el reto de hoy.' dist/index.html",
+      "grep -qi -- '--durazno: #efb18c' src/styles/tokens.css"
+    ],
+    "checkpoint": "step-01-estructura",
+    "files": [
+      "src/pages/index.astro",
+      "src/layouts/Base.astro",
+      "src/styles/tokens.css",
+      "src/styles/global.css",
+      "e2e/humo.spec.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E1-T2",
+    "title": "Definir tipos y reparto de retos",
+    "epic": "01-base",
+    "dependencies": [
+      "E1-T1"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `trios` receives 50 items THE SYSTEM SHALL return 16 trios whose first is n = 1, 17, 33, dropping the leftover items.",
+      "WHEN `trios` receives 40 items THE SYSTEM SHALL return 13 trios with no repeated item in the cycle.",
+      "WHEN `retoDeHoy` receives a Lima date THE SYSTEM SHALL pick the trio at days since `2026-01-01` modulo k, including dates before `2026-01-01`.",
+      "WHEN `fechaLima` receives `2026-03-10T03:00:00Z` THE SYSTEM SHALL return `2026-03-09`, the Lima date, on any device time zone.",
+      "WHEN `retoDeHoy` receives fewer than 3 items THE SYSTEM SHALL throw `Banco sin ejercicios suficientes`."
+    ],
+    "verify": [
+      "npm test -- src/lib/fechas.test.ts src/lib/retos.test.ts",
+      "status=0; grep -rnE 'getDate\\(|getMonth\\(|getFullYear\\(|getHours\\(|toLocaleDateString' src/lib || status=$?; test \"$status\" -eq 1",
+      "npm run build",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-02-retos",
+    "files": [
+      "src/data/tipos.ts",
+      "src/lib/fechas.ts",
+      "src/lib/retos.ts",
+      "src/lib/fechas.test.ts",
+      "src/lib/retos.test.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E2-T1",
+    "title": "Construir banco de límites y verificador",
+    "epic": "02-banco",
+    "dependencies": [
+      "E1-T2"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `npm run banco` runs with only `src/data/banco/limites.json` present THE SYSTEM SHALL exit 0, print `banco ok` and list the 3 missing topics as `pendiente`.",
+      "WHEN `npm run banco` evaluates each limit numerically near `chequeo.punto`, or at large x for infinity, THE SYSTEM SHALL find it equal to `respuesta` for all 50 items.",
+      "WHEN `scripts/verificar-banco.mjs` reads `tests/fixtures/banco-malo` THE SYSTEM SHALL exit 1 printing `FALLA lim-01: notación prohibida` and `FALLA lim-01: f(`.",
+      "WHEN `scripts/verificar-banco.mjs --completo` misses a topic file THE SYSTEM SHALL exit 1 printing `FALLA integrales: falta`.",
+      "WHEN `src/data/banco/limites.json` is read THE SYSTEM SHALL contain `Diferencia de cubos`."
+    ],
+    "verify": [
+      "npm run banco",
+      "npm test -- tests/verificar-banco.test.ts",
+      "grep -q 'Diferencia de cubos' src/data/banco/limites.json",
+      "npm run build",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-03-banco-limites",
+    "files": [
+      "src/data/banco/limites.json",
+      "scripts/verificar-banco.mjs",
+      "tests/verificar-banco.test.ts",
+      "tests/fixtures/banco-malo/limites.json"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E2-T2",
+    "title": "Construir banco de continuidad",
+    "epic": "02-banco",
+    "dependencies": [
+      "E2-T1"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `npm run banco` runs THE SYSTEM SHALL exit 0 with `src/data/banco/continuidad.json` holding 40 items, each id `con-NN` matching a number of the PDF section.",
+      "WHEN `tests/banco-continuidad.test.ts` runs THE SYSTEM SHALL find no item with n in 6, 25, 26, 27, 28, 29, 30, 31, 34, 43.",
+      "WHEN `tests/banco-continuidad.test.ts` runs THE SYSTEM SHALL find `removible` exactly at 3, 4, 22, 24, 36, `salto` at 8, 11 to 20, 38, 40, and `infinita` only at 5.",
+      "WHEN `tests/banco-continuidad.test.ts` runs THE SYSTEM SHALL find `tipo` `expresion` exactly at 41, 42, 44 to 50.",
+      "WHEN a statement from 11 to 20 is read THE SYSTEM SHALL contain no `+(` or `1x` of the PDF's raw notation."
+    ],
+    "verify": [
+      "npm run banco",
+      "npm test -- tests/banco-continuidad.test.ts",
+      "npm run build",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-04-banco-continuidad",
+    "files": [
+      "src/data/banco/continuidad.json",
+      "tests/banco-continuidad.test.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E2-T3",
+    "title": "Construir banco de derivadas",
+    "epic": "02-banco",
+    "dependencies": [
+      "E2-T1"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `npm run banco` runs THE SYSTEM SHALL exit 0 with `src/data/banco/derivadas.json` holding 50 items whose central difference of `chequeo.f` equals `respuesta`.",
+      "WHEN `tests/banco-derivadas.test.ts` runs THE SYSTEM SHALL find `chequeo.en` as 2, -1 and 1 at n = 33, 34, 35 with `respuesta` 10, -11 and 5.",
+      "WHEN `tests/banco-derivadas.test.ts` runs THE SYSTEM SHALL find the text `Halla $f'(x)$` in every other statement.",
+      "WHEN `tests/banco-derivadas.test.ts` runs THE SYSTEM SHALL find no `f'(x)=` inside any `respuesta`."
+    ],
+    "verify": [
+      "npm run banco",
+      "npm test -- tests/banco-derivadas.test.ts",
+      "npm run build",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-05-banco-derivadas",
+    "files": [
+      "src/data/banco/derivadas.json",
+      "tests/banco-derivadas.test.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E2-T4",
+    "title": "Construir banco de integrales",
+    "epic": "02-banco",
+    "dependencies": [
+      "E2-T2",
+      "E2-T3"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `npm run banco -- --completo` runs THE SYSTEM SHALL exit 0 with the four topic files present and totals 50, 40, 50, 50.",
+      "WHEN `npm run banco` checks an indefinite integral THE SYSTEM SHALL find the central difference of `respuesta` equal to `chequeo.f`.",
+      "WHEN `npm run banco` checks a definite integral THE SYSTEM SHALL find the Simpson value equal to `respuesta`.",
+      "WHEN `tests/banco-integrales.test.ts` runs THE SYSTEM SHALL find `constante` true and a final `+C` at n = 1 to 30 and 41 to 50, and neither at n = 31 to 40."
+    ],
+    "verify": [
+      "npm run banco -- --completo",
+      "npm test -- tests/banco-integrales.test.ts",
+      "npm run build",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-06-banco-integrales",
+    "files": [
+      "src/data/banco/integrales.json",
+      "tests/banco-integrales.test.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E3-T1",
+    "title": "Implementar corrector",
+    "epic": "03-motor",
+    "dependencies": [
+      "E2-T2",
+      "E2-T3",
+      "E2-T4"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `corregir` compares equivalent forms such as `2\\operatorname{sen}x\\cos x` and `\\operatorname{sen}2x` THE SYSTEM SHALL return `correcto`.",
+      "WHEN `corregir` receives `x=` or blank text THE SYSTEM SHALL return `invalido` and consume no attempt.",
+      "WHEN `corregir` receives `t^2` for `x^2` THE SYSTEM SHALL return `incorrecto`.",
+      "WHEN an item has `constante` true and the student omits C THE SYSTEM SHALL return `correcto` with `faltaC` true.",
+      "WHEN `tests` run over every `tipo` `expresion` item of the four banks THE SYSTEM SHALL grade its own `respuesta` as `correcto`.",
+      "WHEN `tests` run over every `tipo` `expresion` item of the four banks THE SYSTEM SHALL grade a false answer as `incorrecto`."
+    ],
+    "verify": [
+      "npm test -- src/lib/corrector.test.ts",
+      "npm run banco -- --completo",
+      "npm run build",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-07-corrector",
+    "files": [
+      "src/lib/corrector.ts",
+      "src/lib/corrector.test.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E3-T2",
+    "title": "Guardar progreso y racha",
+    "epic": "03-motor",
+    "dependencies": [
+      "E1-T2"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `guardarResultado(\"limites\", \"2026-03-10\", 2)` runs THE SYSTEM SHALL store `{\"resultados\":{\"2026-03-10\":{\"limites\":2}}}` under the key `pasa-calculo:v1`.",
+      "WHEN results exist on 3 consecutive Lima dates ending today THE SYSTEM SHALL return `racha` 3.",
+      "WHEN the latest result is yesterday THE SYSTEM SHALL keep the streak, and WHEN it is older THE SYSTEM SHALL return `racha` 0.",
+      "WHEN stored JSON is corrupt THE SYSTEM SHALL return `null` from `resultadoDe` and 0 from `racha` without throwing.",
+      "WHEN `setItem` throws THE SYSTEM SHALL finish `guardarResultado` without throwing."
+    ],
+    "verify": [
+      "npm test -- src/lib/progreso.test.ts",
+      "npm run build",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-08-progreso",
+    "files": [
+      "src/lib/progreso.ts",
+      "src/lib/progreso.test.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E4-T1",
+    "title": "Crear isla Reto y pantalla Inicio",
+    "epic": "04-pantallas",
+    "dependencies": [
+      "E2-T2",
+      "E2-T3",
+      "E2-T4",
+      "E3-T2"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `/` loads with no stored progress THE SYSTEM SHALL show the heading `Reto de hoy: 3 ejercicios`, four buttons `Límites`, `Continuidad`, `Derivadas`, `Integrales`, the text `CEC | Cálculo`, and no `Racha` line.",
+      "WHEN `pasa-calculo:v1` holds results for today and yesterday THE SYSTEM SHALL show `Racha: 2 días`.",
+      "WHEN Inicio has loaded THE SYSTEM SHALL leave `customElements.get(\"math-field\")` undefined, proving MathLive is not loaded yet.",
+      "WHEN the student taps `Límites` THE SYSTEM SHALL show `1 de 3`."
+    ],
+    "verify": [
+      "npm run build",
+      "npm run e2e -- e2e/inicio.spec.ts",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-09-inicio",
+    "files": [
+      "src/components/Reto.tsx",
+      "src/components/Inicio.tsx",
+      "src/lib/banco.ts",
+      "src/pages/index.astro",
+      "e2e/inicio.spec.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E4-T2",
+    "title": "Crear pantalla Ejercicio con teclado",
+    "epic": "04-pantallas",
+    "dependencies": [
+      "E3-T1",
+      "E4-T1"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN the student enters `Derivadas` THE SYSTEM SHALL show `1 de 3`, a `.katex` statement, a `math-field`, `Comprobar` disabled, `customElements.get(\"math-field\")` defined and `window.mathVirtualKeyboard.visible` true.",
+      "WHEN a value is set in `math-field` THE SYSTEM SHALL enable `Comprobar`.",
+      "WHEN the value `x=` is checked THE SYSTEM SHALL show `Revisa tu respuesta` and keep `1 de 3`.",
+      "WHEN the student enters `Continuidad` on `2026-01-01` THE SYSTEM SHALL show the buttons `Continua`, `Discontinua removible`, `Discontinua de salto`, `Discontinua infinita` and no `math-field`.",
+      "WHEN `JSON.stringify(window.mathVirtualKeyboard.layouts)` is read THE SYSTEM SHALL contain `∞` and no `arcsen` in `Límites`, contain `arcsen` and no `∞` in `Derivadas`, and contain the key `C` label in `Integrales`."
+    ],
+    "verify": [
+      "npm run build",
+      "npm run e2e -- e2e/ejercicio.spec.ts",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-10-ejercicio",
+    "files": [
+      "src/components/Ejercicio.tsx",
+      "src/components/Formula.tsx",
+      "src/lib/teclado.ts",
+      "src/components/Reto.tsx",
+      "e2e/ejercicio.spec.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E4-T3",
+    "title": "Crear pantalla Respuesta",
+    "epic": "04-pantallas",
+    "dependencies": [
+      "E4-T2"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN the correct `respuesta` is checked THE SYSTEM SHALL show `✓ Correcto` with the green class `acierto`, the correct answer in `.katex` and the `solucion`.",
+      "WHEN a false answer is checked THE SYSTEM SHALL show `✗ Incorrecto` with the red class `error` and the correct answer.",
+      "WHEN an indefinite integral is answered correctly without C THE SYSTEM SHALL show `Correcto. Recuerda escribir el +C.`.",
+      "WHEN the third exercise has been checked THE SYSTEM SHALL label the primary button `Ver resultado`, and on the first two `Siguiente`."
+    ],
+    "verify": [
+      "npm run build",
+      "npm run e2e -- e2e/respuesta.spec.ts",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-11-respuesta",
+    "files": [
+      "src/components/Respuesta.tsx",
+      "src/components/Reto.tsx",
+      "e2e/respuesta.spec.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E4-T4",
+    "title": "Crear pantalla Resultado y WhatsApp",
+    "epic": "04-pantallas",
+    "dependencies": [
+      "E4-T3"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN three correct answers are given THE SYSTEM SHALL show `3 de 3` and `¡Excelente!`.",
+      "WHEN two or fewer correct answers are given THE SYSTEM SHALL show `Vas bien, te falta poco` for 2 and `Aquí te conviene reforzar` for 0.",
+      "WHEN Resultado is shown THE SYSTEM SHALL show the phrase `Te acompañaré hasta que logres pasar el cálculo que necesites` and a link `Quiero que me acompañes` with href exactly `https://wa.link/de928w`, `target` `_blank` and `rel` containing `noopener`.",
+      "WHEN Resultado is shown THE SYSTEM SHALL show text matching `Nuevo reto en \\d\\d:\\d\\d:\\d\\d`.",
+      "WHEN the page reloads and the student taps the finished topic THE SYSTEM SHALL go straight to Resultado with the same score."
+    ],
+    "verify": [
+      "npm run build",
+      "npm run e2e -- e2e/resultado.spec.ts",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-12-resultado",
+    "files": [
+      "src/components/Resultado.tsx",
+      "src/components/Reto.tsx",
+      "e2e/resultado.spec.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E4-T5",
+    "title": "Crear tarjeta para compartir",
+    "epic": "04-pantallas",
+    "dependencies": [
+      "E4-T4"
+    ],
+    "priority": "p1",
+    "acceptance": [
+      "WHEN `navigator.canShare` is unavailable and the student taps `Compartir resultado` THE SYSTEM SHALL download `pasa-calculo-resultado.png`, a PNG of 1080 by 1920 pixels.",
+      "WHEN `navigator.canShare` returns true THE SYSTEM SHALL call `navigator.share` with one `image/png` file named `pasa-calculo-resultado.png` and start no download.",
+      "WHEN Resultado is shown THE SYSTEM SHALL make no request to any host other than the page origin while creating the card."
+    ],
+    "verify": [
+      "npm run build",
+      "npm run e2e -- e2e/compartir.spec.ts",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-13-compartir",
+    "files": [
+      "src/lib/tarjeta.ts",
+      "src/components/Resultado.tsx",
+      "e2e/compartir.spec.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E5-T1",
+    "title": "Probar flujo completo en móvil",
+    "epic": "05-entrega",
+    "dependencies": [
+      "E4-T5"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN each of the four topics is completed with correct answers at 360 by 740 THE SYSTEM SHALL reach `3 de 3`.",
+      "WHEN each screen is shown at 360 by 740 THE SYSTEM SHALL keep `document.documentElement.scrollWidth` at 360 or less and render exactly one `h1`.",
+      "WHEN each screen is shown THE SYSTEM SHALL render every `main button` and `main a` at 48px of height or more.",
+      "WHEN the viewport is 320 by 568 THE SYSTEM SHALL keep `document.documentElement.scrollWidth` at 320 or less.",
+      "WHEN a finished topic is reopened after a reload THE SYSTEM SHALL show Resultado with `href` exactly `https://wa.link/de928w`."
+    ],
+    "verify": [
+      "npm run build",
+      "npm run e2e",
+      "npm test",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-14-e2e-completo",
+    "files": [
+      "e2e/flujo.spec.ts"
+    ],
+    "status": "pending"
+  },
+  {
+    "id": "E5-T2",
+    "title": "Configurar publicación en GitHub Pages",
+    "epic": "05-entrega",
+    "dependencies": [
+      "E5-T1"
+    ],
+    "priority": "p0",
+    "acceptance": [
+      "WHEN `node scripts/verificar-dist.mjs` reads the built `dist/` THE SYSTEM SHALL exit 0 printing `dist ok`.",
+      "WHEN `scripts/verificar-dist.mjs` reads `tests/fixtures/dist-malo` THE SYSTEM SHALL exit 1 printing `FALLA falta el título` and `FALLA ruta fuera de la base: /otra-base/a.js`.",
+      "WHEN `.github/workflows/deploy.yml` is read THE SYSTEM SHALL name `actions/deploy-pages@v5`, a push trigger on `main`, and the commands `npm test`, `npm run banco -- --completo`, `npm run build` and `npm run e2e`."
+    ],
+    "verify": [
+      "npm test -- tests/verificar-dist.test.ts",
+      "npm run build",
+      "node scripts/verificar-dist.mjs",
+      "grep -q 'actions/deploy-pages@v5' .github/workflows/deploy.yml",
+      "grep -q 'branches: \\[main\\]' .github/workflows/deploy.yml",
+      "grep -q 'run: npm test' .github/workflows/deploy.yml",
+      "grep -q 'run: npm run build' .github/workflows/deploy.yml",
+      "grep -q 'npm run banco -- --completo' .github/workflows/deploy.yml",
+      "grep -q 'npm run e2e' .github/workflows/deploy.yml",
+      "npm run format:check"
+    ],
+    "checkpoint": "step-15-publicar",
+    "files": [
+      ".github/workflows/deploy.yml",
+      "scripts/verificar-dist.mjs",
+      "tests/verificar-dist.test.ts",
+      "tests/fixtures/dist-malo/index.html"
+    ],
+    "status": "pending"
+  }
+]
