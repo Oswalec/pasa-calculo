@@ -1,6 +1,8 @@
 import { useEffect, useState } from "preact/hooks";
+import type { Tema } from "../data/tipos.ts";
 import { cuentaRegresiva, fechaLima } from "../lib/fechas.ts";
 import { racha } from "../lib/progreso.ts";
+import { compartirTarjeta, crearTarjeta } from "../lib/tarjeta.ts";
 
 function nivel(aciertos: number): string {
   if (aciertos === 3) return "¡Excelente!";
@@ -8,9 +10,19 @@ function nivel(aciertos: number): string {
   return "Aquí te conviene reforzar";
 }
 
-export default function Resultado({ aciertos }: { aciertos: number }) {
+type Props = { tema: Tema; aciertos: number };
+
+export default function Resultado({ tema, aciertos }: Props) {
   const [restante, setRestante] = useState(() => cuentaRegresiva());
   const dias = racha(fechaLima());
+
+  async function compartir() {
+    try {
+      await compartirTarjeta(await crearTarjeta({ tema, aciertos }));
+    } catch {
+      // El alumno canceló el menú de compartir: no hay nada que mostrar.
+    }
+  }
 
   useEffect(() => {
     const reloj = setInterval(() => setRestante(cuentaRegresiva()), 1000);
@@ -30,6 +42,9 @@ export default function Resultado({ aciertos }: { aciertos: number }) {
       >
         Quiero que me acompañes
       </a>
+      <button type="button" class="enlace-pequeno" onClick={compartir}>
+        Compartir resultado
+      </button>
       <p class="discreto">
         {dias > 0 && `Racha: ${dias} ${dias === 1 ? "día" : "días"} · `}
         Nuevo reto en {restante}

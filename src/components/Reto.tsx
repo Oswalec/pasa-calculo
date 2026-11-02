@@ -53,7 +53,9 @@ export default function Reto() {
   }
 
   if (pantalla === "inicio") return <Inicio alElegir={elegirTema} />;
-  if (pantalla === "resultado") return <Resultado aciertos={aciertos} />;
+  if (pantalla === "resultado") {
+    return <Resultado tema={tema} aciertos={aciertos} />;
+  }
   if (!trio) return null;
   const ejercicio = trio[indice] as Item;
   if (pantalla === "respuesta" && veredicto) {
