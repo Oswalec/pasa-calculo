@@ -176,7 +176,7 @@
       "src/data/banco/integrales.json",
       "tests/banco-integrales.test.ts"
     ],
-    "status": "pending"
+    "status": "done"
   },
   {
     "id": "E3-T1",

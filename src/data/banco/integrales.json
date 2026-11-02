@@ -1,0 +1,712 @@
+[
+  {
+    "id": "int-01",
+    "tema": "integrales",
+    "n": 1,
+    "enunciado": "Calcula $\\int(4x^3-6x+2)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "x^4-3x^2+2x+C",
+    "constante": true,
+    "solucion": "Integra término a término: $4\\cdot\\frac{x^4}{4}-6\\cdot\\frac{x^2}{2}+2x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(4x^3-6x+2)"
+    }
+  },
+  {
+    "id": "int-02",
+    "tema": "integrales",
+    "n": 2,
+    "enunciado": "Calcula $\\int(5x^4+3x^2-7)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "x^5+x^3-7x+C",
+    "constante": true,
+    "solucion": "Aplica $\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}$: $x^5+x^3-7x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(5x^4+3x^2-7)"
+    }
+  },
+  {
+    "id": "int-03",
+    "tema": "integrales",
+    "n": 3,
+    "enunciado": "Calcula $\\int(6x^5-2x^3)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "x^6-\\frac{x^4}{2}+C",
+    "constante": true,
+    "solucion": "Integra: $6\\cdot\\frac{x^6}{6}-2\\cdot\\frac{x^4}{4}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(6x^5-2x^3)"
+    }
+  },
+  {
+    "id": "int-04",
+    "tema": "integrales",
+    "n": 4,
+    "enunciado": "Calcula $\\int(3\\sqrt{x}+2)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "2x^{3/2}+2x+C",
+    "constante": true,
+    "solucion": "Escribe $3x^{1/2}+2$ e integra: $2x^{3/2}+2x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(3\\sqrt{x}+2)"
+    }
+  },
+  {
+    "id": "int-05",
+    "tema": "integrales",
+    "n": 5,
+    "enunciado": "Calcula $\\int\\frac{2}{x}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "2\\ln|x|+C",
+    "constante": true,
+    "solucion": "Usa $\\int\\frac{1}{x}\\,dx=\\ln|x|$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{2}{x}"
+    }
+  },
+  {
+    "id": "int-06",
+    "tema": "integrales",
+    "n": 6,
+    "enunciado": "Calcula $\\int\\frac{1}{\\sqrt{x}}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "2\\sqrt{x}+C",
+    "constante": true,
+    "solucion": "Escribe $x^{-1/2}$; integra: $\\frac{x^{1/2}}{1/2}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{1}{\\sqrt{x}}"
+    }
+  },
+  {
+    "id": "int-07",
+    "tema": "integrales",
+    "n": 7,
+    "enunciado": "Calcula $\\int(3x^2+4x-1)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "x^3+2x^2-x+C",
+    "constante": true,
+    "solucion": "Integra cada término: $x^3+2x^2-x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(3x^2+4x-1)"
+    }
+  },
+  {
+    "id": "int-08",
+    "tema": "integrales",
+    "n": 8,
+    "enunciado": "Calcula $\\int(8x^7-3x^2)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "x^8-x^3+C",
+    "constante": true,
+    "solucion": "Integra: $8\\cdot\\frac{x^8}{8}-3\\cdot\\frac{x^3}{3}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(8x^7-3x^2)"
+    }
+  },
+  {
+    "id": "int-09",
+    "tema": "integrales",
+    "n": 9,
+    "enunciado": "Calcula $\\int\\left(5x^4-\\frac{4}{x^2}\\right)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "x^5+\\frac{4}{x}+C",
+    "constante": true,
+    "solucion": "Escribe $5x^4-4x^{-2}$; integra.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\left(5x^4-\\frac{4}{x^2}\\right)"
+    }
+  },
+  {
+    "id": "int-10",
+    "tema": "integrales",
+    "n": 10,
+    "enunciado": "Calcula $\\int(2x+1)^6\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{(2x+1)^7}{14}+C",
+    "constante": true,
+    "solucion": "Sustituye $u=2x+1$, $du=2\\,dx$; integra $\\frac{u^6}{2}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(2x+1)^6"
+    }
+  },
+  {
+    "id": "int-11",
+    "tema": "integrales",
+    "n": 11,
+    "enunciado": "Calcula $\\int\\cos x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\operatorname{sen} x+C",
+    "constante": true,
+    "solucion": "Antiderivada básica del coseno.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\cos x"
+    }
+  },
+  {
+    "id": "int-12",
+    "tema": "integrales",
+    "n": 12,
+    "enunciado": "Calcula $\\int\\operatorname{sen} x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "-\\cos x+C",
+    "constante": true,
+    "solucion": "Antiderivada básica del seno.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\sin x"
+    }
+  },
+  {
+    "id": "int-13",
+    "tema": "integrales",
+    "n": 13,
+    "enunciado": "Calcula $\\int\\sec^2 x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\tan x+C",
+    "constante": true,
+    "solucion": "Antiderivada básica de $\\sec^2 x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\sec^2 x"
+    }
+  },
+  {
+    "id": "int-14",
+    "tema": "integrales",
+    "n": 14,
+    "enunciado": "Calcula $\\int\\csc^2 x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "-\\cot x+C",
+    "constante": true,
+    "solucion": "Antiderivada básica de $\\csc^2 x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\csc^2 x"
+    }
+  },
+  {
+    "id": "int-15",
+    "tema": "integrales",
+    "n": 15,
+    "enunciado": "Calcula $\\int(3\\cos x-2\\operatorname{sen} x)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "3\\operatorname{sen} x+2\\cos x+C",
+    "constante": true,
+    "solucion": "Integra término a término: $3\\operatorname{sen} x+2\\cos x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(3\\cos x-2\\sin x)"
+    }
+  },
+  {
+    "id": "int-16",
+    "tema": "integrales",
+    "n": 16,
+    "enunciado": "Calcula $\\int\\cos(4x)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{\\operatorname{sen}(4x)}{4}+C",
+    "constante": true,
+    "solucion": "Sustitución $u=4x$, $du=4\\,dx$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\cos(4x)"
+    }
+  },
+  {
+    "id": "int-17",
+    "tema": "integrales",
+    "n": 17,
+    "enunciado": "Calcula $\\int\\operatorname{sen}(5x)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "-\\frac{\\cos(5x)}{5}+C",
+    "constante": true,
+    "solucion": "Sustitución $u=5x$, $du=5\\,dx$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\sin(5x)"
+    }
+  },
+  {
+    "id": "int-18",
+    "tema": "integrales",
+    "n": 18,
+    "enunciado": "Calcula $\\int e^x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "e^x+C",
+    "constante": true,
+    "solucion": "La exponencial es su propia antiderivada.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "e^x"
+    }
+  },
+  {
+    "id": "int-19",
+    "tema": "integrales",
+    "n": 19,
+    "enunciado": "Calcula $\\int e^{3x}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{e^{3x}}{3}+C",
+    "constante": true,
+    "solucion": "Sustitución $u=3x$; divide entre $3$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "e^{3x}"
+    }
+  },
+  {
+    "id": "int-20",
+    "tema": "integrales",
+    "n": 20,
+    "enunciado": "Calcula $\\int\\frac{1}{2x+1}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{1}{2}\\ln|2x+1|+C",
+    "constante": true,
+    "solucion": "$u=2x+1$, $du=2\\,dx$; aparece el factor $\\frac{1}{2}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{1}{2x+1}"
+    }
+  },
+  {
+    "id": "int-21",
+    "tema": "integrales",
+    "n": 21,
+    "enunciado": "Calcula $\\int 2x(x^2+1)^4\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{(x^2+1)^5}{5}+C",
+    "constante": true,
+    "solucion": "$u=x^2+1$, $du=2x\\,dx$; integra $u^4$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "2x(x^2+1)^4"
+    }
+  },
+  {
+    "id": "int-22",
+    "tema": "integrales",
+    "n": 22,
+    "enunciado": "Calcula $\\int 3(3x+2)^5\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{(3x+2)^6}{6}+C",
+    "constante": true,
+    "solucion": "$u=3x+2$, $du=3\\,dx$; integra $u^5$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "3(3x+2)^5"
+    }
+  },
+  {
+    "id": "int-23",
+    "tema": "integrales",
+    "n": 23,
+    "enunciado": "Calcula $\\int x\\sqrt{x^2+4}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{(x^2+4)^{3/2}}{3}+C",
+    "constante": true,
+    "solucion": "$u=x^2+4$, $du=2x\\,dx$; queda $\\frac{1}{2}\\int u^{1/2}\\,du$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "x\\sqrt{x^2+4}"
+    }
+  },
+  {
+    "id": "int-24",
+    "tema": "integrales",
+    "n": 24,
+    "enunciado": "Calcula $\\int\\frac{2x+3}{x^2+3x+1}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\ln|x^2+3x+1|+C",
+    "constante": true,
+    "solucion": "El numerador es la derivada del denominador. Usa $\\ln|u|$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{2x+3}{x^2+3x+1}"
+    }
+  },
+  {
+    "id": "int-25",
+    "tema": "integrales",
+    "n": 25,
+    "enunciado": "Calcula $\\int\\cos(2x+1)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{\\operatorname{sen}(2x+1)}{2}+C",
+    "constante": true,
+    "solucion": "$u=2x+1$; integra $\\cos u$ y divide entre $2$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\cos(2x+1)"
+    }
+  },
+  {
+    "id": "int-26",
+    "tema": "integrales",
+    "n": 26,
+    "enunciado": "Calcula $\\int\\operatorname{sen}(3x-2)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "-\\frac{\\cos(3x-2)}{3}+C",
+    "constante": true,
+    "solucion": "$u=3x-2$; integra el seno y divide entre $3$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\sin(3x-2)"
+    }
+  },
+  {
+    "id": "int-27",
+    "tema": "integrales",
+    "n": 27,
+    "enunciado": "Calcula $\\int\\frac{1}{x^2+1}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\arctan x+C",
+    "constante": true,
+    "solucion": "Antiderivada estándar de $\\frac{1}{1+x^2}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{1}{x^2+1}"
+    }
+  },
+  {
+    "id": "int-28",
+    "tema": "integrales",
+    "n": 28,
+    "enunciado": "Calcula $\\int\\frac{1}{\\sqrt{1-x^2}}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\operatorname{arcsen} x+C",
+    "constante": true,
+    "solucion": "Antiderivada estándar que da $\\operatorname{arcsen} x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{1}{\\sqrt{1-x^2}}"
+    }
+  },
+  {
+    "id": "int-29",
+    "tema": "integrales",
+    "n": 29,
+    "enunciado": "Calcula $\\int\\left(\\frac{1}{x}+4e^x\\right)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\ln|x|+4e^x+C",
+    "constante": true,
+    "solucion": "Integra cada término por separado.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\left(\\frac{1}{x}+4e^x\\right)"
+    }
+  },
+  {
+    "id": "int-30",
+    "tema": "integrales",
+    "n": 30,
+    "enunciado": "Calcula $\\int(2x^3+3\\cos x)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{x^4}{2}+3\\operatorname{sen} x+C",
+    "constante": true,
+    "solucion": "Integra: $\\frac{x^4}{2}+3\\operatorname{sen} x$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(2x^3+3\\cos x)"
+    }
+  },
+  {
+    "id": "int-31",
+    "tema": "integrales",
+    "n": 31,
+    "enunciado": "Calcula $\\int_{0}^{2}3x^2\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "8",
+    "solucion": "Primitiva $x^3$. Evalúa: $8-0$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "3x^2",
+      "a": 0,
+      "b": 2
+    }
+  },
+  {
+    "id": "int-32",
+    "tema": "integrales",
+    "n": 32,
+    "enunciado": "Calcula $\\int_{1}^{3}(2x+1)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "10",
+    "solucion": "Primitiva $x^2+x$. Evalúa: $(9+3)-(1+1)$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(2x+1)",
+      "a": 1,
+      "b": 3
+    }
+  },
+  {
+    "id": "int-33",
+    "tema": "integrales",
+    "n": 33,
+    "enunciado": "Calcula $\\int_{0}^{\\pi}\\operatorname{sen} x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Primitiva $-\\cos x$. Evalúa: $-\\cos\\pi+\\cos 0=1+1$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\sin x",
+      "a": 0,
+      "b": 3.141592653589793
+    }
+  },
+  {
+    "id": "int-34",
+    "tema": "integrales",
+    "n": 34,
+    "enunciado": "Calcula $\\int_{0}^{\\frac{\\pi}{2}}\\cos x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Primitiva $\\operatorname{sen} x$. Evalúa: $\\operatorname{sen}\\frac{\\pi}{2}-\\operatorname{sen} 0$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\cos x",
+      "a": 0,
+      "b": 1.5707963267948966
+    }
+  },
+  {
+    "id": "int-35",
+    "tema": "integrales",
+    "n": 35,
+    "enunciado": "Calcula $\\int_{1}^{2}\\frac{1}{x}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\ln 2",
+    "solucion": "Primitiva $\\ln|x|$. Evalúa: $\\ln 2-\\ln 1$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{1}{x}",
+      "a": 1,
+      "b": 2
+    }
+  },
+  {
+    "id": "int-36",
+    "tema": "integrales",
+    "n": 36,
+    "enunciado": "Calcula $\\int_{0}^{1}2xe^{x^2}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "e-1",
+    "solucion": "$u=x^2$; límites $0$ y $1$. Queda $\\int_{0}^{1}e^u\\,du$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "2xe^{x^2}",
+      "a": 0,
+      "b": 1
+    }
+  },
+  {
+    "id": "int-37",
+    "tema": "integrales",
+    "n": 37,
+    "enunciado": "Calcula $\\int_{0}^{1}6x(3x^2+1)^2\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "21",
+    "solucion": "$u=3x^2+1$, $du=6x\\,dx$; límites $1$ y $4$. Integra $u^2$: $\\frac{4^3-1^3}{3}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "6x(3x^2+1)^2",
+      "a": 0,
+      "b": 1
+    }
+  },
+  {
+    "id": "int-38",
+    "tema": "integrales",
+    "n": 38,
+    "enunciado": "Calcula $\\int_{0}^{2}(x+1)^2\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{26}{3}",
+    "solucion": "Expande $x^2+2x+1$. Primitiva $\\frac{x^3}{3}+x^2+x$; evalúa en $2$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(x+1)^2",
+      "a": 0,
+      "b": 2
+    }
+  },
+  {
+    "id": "int-39",
+    "tema": "integrales",
+    "n": 39,
+    "enunciado": "Calcula $\\int_{0}^{1}(3x^2+2x)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "2",
+    "solucion": "Primitiva $x^3+x^2$. Evalúa en $1$ menos en $0$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(3x^2+2x)",
+      "a": 0,
+      "b": 1
+    }
+  },
+  {
+    "id": "int-40",
+    "tema": "integrales",
+    "n": 40,
+    "enunciado": "Calcula $\\int_{0}^{\\frac{\\pi}{4}}\\sec^2 x\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "1",
+    "solucion": "Primitiva $\\tan x$. Evalúa: $\\tan\\frac{\\pi}{4}-\\tan 0$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\sec^2 x",
+      "a": 0,
+      "b": 0.7853981633974483
+    }
+  },
+  {
+    "id": "int-41",
+    "tema": "integrales",
+    "n": 41,
+    "enunciado": "Calcula $\\int\\frac{4x-3}{2x^2-3x+5}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\ln|2x^2-3x+5|+C",
+    "constante": true,
+    "solucion": "El numerador es la derivada del denominador.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{4x-3}{2x^2-3x+5}"
+    }
+  },
+  {
+    "id": "int-42",
+    "tema": "integrales",
+    "n": 42,
+    "enunciado": "Calcula $\\int\\frac{5x^4}{x^5+2}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\ln|x^5+2|+C",
+    "constante": true,
+    "solucion": "$u=x^5+2$, $du=5x^4\\,dx$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{5x^4}{x^5+2}"
+    }
+  },
+  {
+    "id": "int-43",
+    "tema": "integrales",
+    "n": 43,
+    "enunciado": "Calcula $\\int\\frac{2x}{x^2-9}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\ln|x^2-9|+C",
+    "constante": true,
+    "solucion": "$u=x^2-9$, $du=2x\\,dx$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{2x}{x^2-9}"
+    }
+  },
+  {
+    "id": "int-44",
+    "tema": "integrales",
+    "n": 44,
+    "enunciado": "Calcula $\\int(x+1)^4\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{(x+1)^5}{5}+C",
+    "constante": true,
+    "solucion": "Sustitución $u=x+1$, $du=dx$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(x+1)^4"
+    }
+  },
+  {
+    "id": "int-45",
+    "tema": "integrales",
+    "n": 45,
+    "enunciado": "Calcula $\\int(7-2x)^3\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "-\\frac{(7-2x)^4}{8}+C",
+    "constante": true,
+    "solucion": "$u=7-2x$, $du=-2\\,dx$; factor $-\\frac{1}{2}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(7-2x)^3"
+    }
+  },
+  {
+    "id": "int-46",
+    "tema": "integrales",
+    "n": 46,
+    "enunciado": "Calcula $\\int(2x-5)^{-2}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "-\\frac{1}{2(2x-5)}+C",
+    "constante": true,
+    "solucion": "$u=2x-5$, $du=2\\,dx$. Integra $u^{-2}$ y divide entre $2$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(2x-5)^{-2}"
+    }
+  },
+  {
+    "id": "int-47",
+    "tema": "integrales",
+    "n": 47,
+    "enunciado": "Calcula $\\int\\frac{x^2+1}{x}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{x^2}{2}+\\ln|x|+C",
+    "constante": true,
+    "solucion": "Separa: $x+\\frac{1}{x}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{x^2+1}{x}"
+    }
+  },
+  {
+    "id": "int-48",
+    "tema": "integrales",
+    "n": 48,
+    "enunciado": "Calcula $\\int\\frac{3x^2-4}{x}\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "\\frac{3x^2}{2}-4\\ln|x|+C",
+    "constante": true,
+    "solucion": "Separa: $3x-\\frac{4}{x}$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\frac{3x^2-4}{x}"
+    }
+  },
+  {
+    "id": "int-49",
+    "tema": "integrales",
+    "n": 49,
+    "enunciado": "Calcula $\\int(2\\operatorname{sen} x+3\\cos x)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "-2\\cos x+3\\operatorname{sen} x+C",
+    "constante": true,
+    "solucion": "Integra cada función trigonométrica.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "(2\\sin x+3\\cos x)"
+    }
+  },
+  {
+    "id": "int-50",
+    "tema": "integrales",
+    "n": 50,
+    "enunciado": "Calcula $\\int\\left(4e^{2x}-\\frac{3}{x}\\right)\\,dx$.",
+    "tipo": "expresion",
+    "respuesta": "2e^{2x}-3\\ln|x|+C",
+    "constante": true,
+    "solucion": "Integra $e^{2x}$ dividiendo entre $2$; integra $\\frac{1}{x}$ como $\\ln|x|$.",
+    "chequeo": {
+      "clase": "integral",
+      "f": "\\left(4e^{2x}-\\frac{3}{x}\\right)"
+    }
+  }
+]
