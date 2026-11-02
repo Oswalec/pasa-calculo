@@ -207,7 +207,7 @@
       "src/lib/corrector.ts",
       "src/lib/corrector.test.ts"
     ],
-    "status": "pending"
+    "status": "done"
   },
   {
     "id": "E3-T2",
