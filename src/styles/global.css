@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--negro);
+}
+
+body {
+  margin: 0 auto;
+  max-width: var(--ancho);
+  min-height: 100dvh;
+  padding: var(--margen);
+  background: var(--negro);
+  color: var(--texto);
+  font-family: var(--fuente);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 0 0 var(--margen);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.marca {
+  margin: 0 0 var(--margen);
+  color: var(--suave);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: var(--toque);
+  padding: 12px var(--margen);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity var(--feedback) ease-out;
+}
+
+.boton-primario {
+  border-color: var(--durazno);
+  background: var(--durazno);
+  color: var(--negro);
+}
+
+.boton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.enlace-pequeno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--toque);
+  padding: 0 var(--margen);
+  border: 0;
+  background: none;
+  color: var(--durazno);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pantalla {
+  display: grid;
+  gap: var(--margen);
+}
+
+.discreto {
+  margin: 0;
+  color: var(--suave);
+  font-size: 14px;
+}
+
+.enunciado {
+  overflow-wrap: anywhere;
+  font-size: 18px;
+}
+
+.formula {
+  overflow-x: auto;
+}
+
+.acierto {
+  color: var(--acierto);
+}
+
+.error {
+  color: var(--error);
+}
+
+math-field {
+  display: block;
+  width: 100%;
+  min-height: var(--toque);
+  padding: 8px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: var(--texto);
+  font-size: 20px;
+}
+
+math-field::part(virtual-keyboard-toggle),
+math-field::part(menu-toggle) {
+  display: none;
+}
+
+body {
+  --keyboard-background: var(--superficie);
+  --keyboard-border: var(--borde);
+  --keycap-background: var(--borde);
+  --keycap-background-hover: var(--borde);
+  --keycap-text: var(--texto);
+  --keycap-border: var(--borde);
+  --keycap-border-bottom: var(--borde);
+  --keycap-secondary-background: var(--negro);
+  --keycap-secondary-background-hover: var(--negro);
+  --keycap-secondary-text: var(--texto);
+  --keycap-secondary-border: var(--borde);
+  --keycap-secondary-border-bottom: var(--borde);
+}
+
+:focus-visible {
+  outline: 2px solid var(--durazno);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}
