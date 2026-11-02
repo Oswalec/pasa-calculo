@@ -110,6 +110,61 @@ test("cero aciertos reflexionan primero y ofrecen el acompañamiento", async ({
   );
 });
 
+async function imagenCargada(page: Page, nombre: string) {
+  const imagen = page.locator(".meme img");
+  await expect(imagen).toHaveAttribute(
+    "src",
+    new RegExp(`/cuy/${nombre}\\.webp$`),
+  );
+  await expect
+    .poll(() => imagen.evaluate((el: HTMLImageElement) => el.naturalWidth))
+    .toBeGreaterThan(0);
+}
+
+test("cada puntaje muestra su cuy y su frase", async ({ page }) => {
+  const casos: [string[], string, string][] = [
+    [[FALSA, FALSA, FALSA], "cero", "Hoy Cálculo ganó el round"],
+    [[correctas[0], FALSA, FALSA] as string[], "uno", "Uno menos, ya es algo"],
+    [
+      [correctas[0], correctas[1], FALSA] as string[],
+      "dos",
+      "Tan cerca que ya olía el aprobado",
+    ],
+    [correctas, "tres", "Hoy Cálculo te tuvo miedo"],
+  ];
+  for (const [respuestas, nombre, frase] of casos) {
+    await page.goto("./");
+    await page.evaluate(() => localStorage.clear());
+    await completarLimites(page, respuestas);
+    await imagenCargada(page, nombre);
+    await expect(page.getByText(frase)).toBeVisible();
+    await expect(page.locator("a.boton-primario")).toBeInViewport();
+  }
+});
+
+test("Respuesta muestra un cuy distinto para acierto y error", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date(`${FECHA}T17:00:00Z`));
+  await page.goto("./");
+  await page.getByRole("button", { name: "Límites" }).click();
+  for (const [valor, nombre, frase] of [
+    [correctas[0], "acierto", "Y dicen que Cálculo es difícil"],
+    [FALSA, "error", "Un signo nos traiciona a todos"],
+  ] as [string, string, string][]) {
+    const campo = page.locator("math-field");
+    await expect(campo).toBeVisible();
+    await campo.evaluate((el: HTMLInputElement, v: string) => {
+      el.value = v;
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+    }, valor);
+    await page.getByRole("button", { name: "Comprobar" }).click();
+    await imagenCargada(page, nombre);
+    await expect(page.getByText(frase)).toBeVisible();
+    await page.getByRole("button", { name: "Siguiente" }).click();
+  }
+});
+
 test("Hacer otro tema vuelve a Inicio y conserva lo hecho", async ({
   page,
 }) => {

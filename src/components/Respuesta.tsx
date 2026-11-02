@@ -1,6 +1,7 @@
 import { ETIQUETA_OPCION, type Ejercicio, type Opcion } from "../data/tipos.ts";
 import type { Veredicto } from "../lib/corrector.ts";
 import Formula from "./Formula.tsx";
+import Meme from "./Meme.tsx";
 
 type Props = {
   ejercicio: Ejercicio;
@@ -26,6 +27,14 @@ export default function Respuesta({
       <div role="status">
         <h1 class={correcto ? "acierto" : "error"}>{titular(veredicto)}</h1>
       </div>
+      <Meme
+        imagen={correcto ? "acierto" : "error"}
+        texto={
+          correcto
+            ? "Y dicen que Cálculo es difícil"
+            : "Un signo nos traiciona a todos"
+        }
+      />
       {ejercicio.tipo === "opcion" ? (
         <p class="enunciado">
           {ETIQUETA_OPCION[ejercicio.respuesta as Opcion]}

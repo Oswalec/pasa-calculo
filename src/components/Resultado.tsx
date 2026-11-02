@@ -3,8 +3,11 @@ import type { Tema } from "../data/tipos.ts";
 import { cuentaRegresiva, fechaLima } from "../lib/fechas.ts";
 import { racha } from "../lib/progreso.ts";
 import { compartirTarjeta, crearTarjeta } from "../lib/tarjeta.ts";
+import Meme from "./Meme.tsx";
 
 type Cierre = {
+  imagen: string;
+  meme: string;
   titulo: string;
   reflexion: string;
   oferta: string;
@@ -18,6 +21,8 @@ const BOTON_BASE = "Quiero el acompañamiento";
 /** El cierre según los aciertos: reflexión primero y la oferta de pago al final. */
 const CIERRES: Record<number, Cierre> = {
   0: {
+    imagen: "cero",
+    meme: "Hoy Cálculo ganó el round",
     titulo: "Hoy no salió, y está bien que lo sepas ahora",
     reflexion:
       "Esto no significa que no puedas con Cálculo. Casi siempre falta una base que nadie te explicó bien, y seguir practicando solo, sin saber dónde falla, suele dar el mismo resultado.",
@@ -25,6 +30,8 @@ const CIERRES: Record<number, Cierre> = {
     boton: BOTON_BASE,
   },
   1: {
+    imagen: "uno",
+    meme: "Uno menos, ya es algo",
     titulo: "Ya tienes una parte",
     reflexion:
       "Ese acierto te muestra que sí puedes. Lo que falta es ordenar la base para que no dependa de la suerte.",
@@ -32,6 +39,8 @@ const CIERRES: Record<number, Cierre> = {
     boton: BOTON_BASE,
   },
   2: {
+    imagen: "dos",
+    meme: "Tan cerca que ya olía el aprobado",
     titulo: "Estuviste cerca, y ahí está el riesgo",
     reflexion:
       "Un 2 de 3 te hace sentir listo, pero ese error que no corriges es el que se repite en el examen y te cuesta el curso.",
@@ -40,6 +49,8 @@ const CIERRES: Record<number, Cierre> = {
     boton: "Quiero corregirlo antes del examen",
   },
   3: {
+    imagen: "tres",
+    meme: "Hoy Cálculo te tuvo miedo",
     titulo: "¡Excelente! Ya tienes la base",
     reflexion:
       "Estos ejercicios son los fáciles. El examen sube de nivel, y ahí es donde muchos que iban bien se quedan.",
@@ -72,6 +83,7 @@ export default function Resultado({ tema, aciertos, alOtroTema }: Props) {
   return (
     <section class="pantalla">
       <h1>{aciertos} de 3</h1>
+      <Meme imagen={cierre.imagen} texto={cierre.meme} />
       <p class="cierre-titulo">{cierre.titulo}</p>
       <p class="cierre-texto">{cierre.reflexion}</p>
       <p class="cierre-texto">{cierre.oferta}</p>
