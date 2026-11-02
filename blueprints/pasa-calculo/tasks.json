@@ -148,7 +148,7 @@
       "src/data/banco/derivadas.json",
       "tests/banco-derivadas.test.ts"
     ],
-    "status": "pending"
+    "status": "done"
   },
   {
     "id": "E2-T4",
