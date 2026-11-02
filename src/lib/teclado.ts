@@ -1,12 +1,28 @@
 import type { Tema } from "../data/tipos.ts";
 
 type Tecla =
-  string | { label?: string; latex?: string; insert?: string; class?: string };
+  | string
+  | {
+      label?: string;
+      latex?: string;
+      insert?: string;
+      class?: string;
+      width?: 0.5 | 1 | 1.5 | 2 | 5;
+    };
 
 const DIGITOS_1: Tecla[] = ["7", "8", "9", "+", "-"];
 const DIGITOS_2: Tecla[] = ["4", "5", "6", { label: "×", insert: "\\cdot " }];
 const DIGITOS_3: Tecla[] = ["1", "2", "3", "/"];
-const BASE_4: Tecla[] = ["0", "(", ")", "x", "[backspace]"];
+// Las flechas son la única salida de un exponente, una fracción o una raíz.
+const BASE_4: Tecla[] = [
+  "0",
+  "(",
+  ")",
+  "x",
+  "[left]",
+  "[right]",
+  "[backspace]",
+];
 const FORMA: Tecla[] = [
   { label: "a/b", insert: "\\frac{#@}{#?}" },
   { label: "xⁿ", insert: "#@^{#?}" },
