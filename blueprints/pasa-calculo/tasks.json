@@ -439,6 +439,6 @@
       "tests/verificar-dist.test.ts",
       "tests/fixtures/dist-malo/index.html"
     ],
-    "status": "pending"
+    "status": "done"
   }
 ]
